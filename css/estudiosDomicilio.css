@@ -1,0 +1,90 @@
+main .container_estudios{
+    margin-top: 150px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    'texto imagen'
+    ;
+}
+main .container_estudios .texto{
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    background: var(--azulOmedic);
+    padding: 50px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .container_estudios .texto .title{
+    font-size: 3em;
+    font-weight: bold;
+}
+main .container_estudios .texto p{
+    font-size: 1.2em;
+    margin: 10px 0px;
+}
+main .container_estudios .imagen{
+    width: 100%;
+    height: 100%;
+    grid-area: imagen;
+}
+main .container_estudios .imagen img{
+    width: 100%;
+    height: 100%;
+}
+
+/*=====SERVICIOS========*/
+main .container_servicios{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 50px 1fr 5px;
+    grid-template-areas:  
+    '. . .'
+    '. servicios .'
+    '. . .'
+    ;
+    background: #eee;
+}
+main .container_servicios .servicios{
+    width: 100%;
+    grid-area: servicios;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main .container_servicios .servicios .servicio{
+    width: 500px;
+    background: #fff;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    'title'
+    'lista'
+    ;
+    padding: 20px;
+}
+main .container_servicios .servicios .servicio .title{
+    font-size: 2.2em;
+    font-weight: bold;
+}
+main .container_servicios .servicios .servicio .list ul{
+    padding: 0px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+main .container_servicios .servicios .servicio .list ul li{
+    list-style: none;
+    margin: 5px 0px;
+    width: 50%;
+    padding: 0px;
+    color: var(--grisClaro);
+}

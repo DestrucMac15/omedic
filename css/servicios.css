@@ -16,14 +16,14 @@ main .container_servicios{
 }
 main .container_servicios .servicios{
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     grid-area: servicios;
+    flex-wrap: wrap;
 }
 main .container_servicios .servicios .servicio{
     width: 250px;
-    margin: 0px 10px;
+    margin: 10px;
     background: #eee;
     height: 300px;
     display: grid;
@@ -124,9 +124,49 @@ main .container_agendar .imagen img{
 /*======0DESCRIPCION SERVICIOS=======*/
 main .container_descripcion{
     width: 100%;
-    height: 300px;
-    background: red;
     display: grid;
     grid-template-columns: 100px 1fr 100px;
     grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+    '. . .'
+    '. servicios .'
+    '. . .'
+    ;
+}
+main .container_descripcion .servicios{
+    width: 100%;
+    grid-area: servicios;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main .container_descripcion .servicios > .servicio{
+    padding: 10px;
+    width: 350px;
+    height: 100%;
+    margin: 0px 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+    'imagen title'
+    '. texto'
+    ;
+}
+main .container_descripcion .servicios > .servicio img{
+    grid-area: imagen;
+}
+main .container_descripcion .servicios > .servicio .title{
+    font-size: 1.5em;
+    font-weight: bold;
+    grid-area: title;
+} 
+main .container_descripcion .servicios > .servicio .texto{
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    color: var(--grisClaro);
+}
+main .container_descripcion .servicios > .servicio .texto ul{
+    margin: 15px 0px;
 }

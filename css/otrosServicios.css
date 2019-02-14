@@ -1,0 +1,26 @@
+main .container_otros{
+    width: 100%;
+    height: 500px;
+    margin-top: 150px;
+    background: #eee;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+    '. . .'
+    '. servicios .'
+    '. . .'
+    ;
+}
+main .container_otros .servicios{
+    width: 100%;
+    height: 100%;
+    grid-area: servicios;
+    background: yellow;
+}
+main .container_otros .servicios .title{
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: bold;
+}

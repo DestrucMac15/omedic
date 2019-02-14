@@ -11,13 +11,13 @@
                 <a href="servicios.php" class="<?php echo ($menu == 'servicios') ? 'active' : '' ?>">SERVICIOS</a> 
                     <ul class="sub-menu">
                         <li class="sub-item">
-                            <a href="">Estudios a Domicilio</a>    
+                            <a href="estudios-a-domicilio.php">Estudios a Domicilio</a>    
                         </li>
                         <li class="sub-item">
-                            <a href="">Servicios Compartidos</a>    
+                            <a href="servicios-compartidos.php">Servicios Compartidos</a>    
                         </li>
                         <li class="sub-item">
-                            <a href="">Otros Servicios</a>    
+                            <a href="otros-servicios.php">Otros Servicios</a>    
                         </li>
                     </ul>
             </li>

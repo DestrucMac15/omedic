@@ -120,7 +120,66 @@ $menu = 'servicios';
             </section>
 
             <section class="container_descripcion">
-                
+                <div class="servicios">
+                    <div class="servicio">
+                        <img src="imagenes/icon_serv_05.png" alt="">
+                        <h3 class="title">Servicios a Domicilio</h3>
+                        <div class="texto">
+                            <p>
+                                Realización e interpretación de 
+                                Estudios de Ultrasonido
+                            </p>
+                            <ul>
+                                <li>Convencionales</li>
+                                <li>Doppler</li>
+                                <li>Cardiacos</li>
+                                <li>Especiales</li>
+                            </ul>
+                            <p>
+                                Electrocardiogramas en Reposo (ECG)
+                                Estudios de laboratorio
+                                Hemodiálisis
+                            </p>
+                        </div>
+                    </div>
+                    <div class="servicio">
+                        <img src="imagenes/icon_serv_06.png" alt="">
+                        <h3 class="title">Servicios Compartidos</h3>
+                        <div class="texto">
+                            <p>
+                                Renta de ultrasonido (desde 1 hora y planes mensuales).
+                                Procedimientos por Médicos Radiólogos
+                                Intervencionistas
+                            </p>
+                            <ul>
+                                <li>Biopsias, patología, drenajes de abscesos, entre otros</li>
+                            </ul>
+                            <p>
+                                Realización e Interpretación de Estudios de Ultrasonido
+                            </p>
+                            <ul>
+                                <li>Convencionales, doppler, cardiacos y especiales</li>
+                            </ul>
+                            <p>
+                                Electrocardiogramas en Reposo (ECG) Toma y maquila de estudios de laboratorio 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="servicio">
+                        <img src="imagenes/icon_serv_07.png" alt="">
+                        <h3 class="title">Servicios Especiales</h3>
+                        <div class="texto">
+                            <p>
+                            Check ups laborales para empresas 
+                            Campañas de salud
+                            Check ups personales por especialidad
+                            </p>
+                            <ul>
+                                <li>Nefrología, Cardiología, Vasculares, Hernia, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
