@@ -1,0 +1,48 @@
+footer{
+    width: 100%;
+    background: var(--grisOmedic);
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 50px;
+    grid-template-rows: 20px 1fr 20px;
+    grid-template-areas:  
+    '. . . . . . .'
+    '. logo correo telefono informacion sociales .'
+    '. . . . . . .'
+    ;
+    color: #fff;
+    font-size: 1.1em;
+}
+footer > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8em;
+}
+footer > div img{
+    margin: 0px 5px;
+}
+footer .logo{
+    grid-area: logo;
+}
+footer .correo{
+    grid-area: correo;
+}
+footer .telefono{
+    grid-area: telefono;
+}
+footer .informacion{
+    grid-area: informacion;
+}
+footer .sociales{
+    grid-area: sociales;
+}
+.copyright{
+    font-size: .9em;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    color: #fff;
+    background: #333;
+}

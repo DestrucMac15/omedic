@@ -7,7 +7,7 @@ header .textoInicial{
     font-weight: bold;
     font-size: 2em;
     text-align: center;
-    color: var(--grisOmedic);
+    color: var(--grisClaro);
     margin: 10px 0px;
 }
 
@@ -19,14 +19,184 @@ header .textoInicial{
 
 .container main .container_parrafos{
     width: 100%;
-    height: 400px;
     display: grid;
-    background: red;
-    grid-template-columns: 1em 1fr 1em;
-    grid-template-rows: 1em 1fr 1em;
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-rows: 2em 1fr 2em;
     grid-template-areas: 
     '. . .'
-    '. . .'
+    '. parrafos .'
     '. . .'
     ;
+}
+.container main .container_parrafos .parrafos{
+    width: 100%;
+    height: 100%;
+    grid-area: parrafos;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container main .container_parrafos .parrafos .parrafo{
+    width: 400px;
+    margin: 10px;
+    display: flex;
+}
+.container main .container_parrafos .parrafos .parrafo .icono{
+    margin: 0px 10px;
+}
+.container main .container_parrafos .parrafos .parrafo .texto{
+    padding: 5px;
+}
+.container main .container_parrafos .parrafos .parrafo .texto .title{
+     margin: 10px 0px;
+     font-size: 1.4em;
+     color: var(--grisOmedic);
+}
+.container main .container_parrafos .parrafos .parrafo .texto .txt{
+    text-align: justify;
+    color: var(--grisClaro);
+    line-height: 1.6em;
+}
+
+/*===========DOCTORALIA=========*/
+.container main .container_doctoralia{
+    width: 100%;
+}
+.container main .container_doctoralia .conocemas{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:  
+    'texto imagen'
+    ;
+}
+.container main .container_doctoralia .conocemas .texto{
+    grid-area: texto;
+    width: 100%;
+    height: 100%;
+    background: var(--azulOmedic);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+}
+.container main .container_doctoralia .conocemas .texto .title{
+    font-weight: bold;
+    font-size: 3em;
+}
+.container main .container_doctoralia .conocemas .texto .txt{
+    font-size: 1.5em;
+    margin: 30px 0px;
+}
+.container main .container_doctoralia .conocemas .texto .btn_conoceMas{
+    width: 200px;
+    padding: 20px 0px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--azulOmedic);
+    cursor: pointer;
+    border-radius: 6px;
+}
+.container main .container_doctoralia .conocemas .imagen{
+    grid-area: imagen;
+    width: 100%;
+    height: 100%;
+}
+.container main .container_doctoralia .conocemas .imagen img{
+    width: 100%;
+    height: 100%;
+}
+.container main .container_doctoralia .imagen_doctoralia{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:  
+    '. texto'
+    ;
+}
+.container main .container_doctoralia .imagen_doctoralia img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.container main .container_doctoralia .imagen_doctoralia .texto{
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    z-index: 2; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container main .container_doctoralia .imagen_doctoralia .texto .title{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--verdeDoctoralia);
+}
+.container main .container_doctoralia .imagen_doctoralia .texto .txt{
+    margin: 20px 0px;
+    font-size: 1.2em;
+}
+.container main .container_doctoralia .imagen_doctoralia .texto .btn_visitanos{
+    background: var(--verdeDoctoralia);
+    width: 200px;
+    padding: 20px 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 6px;
+}
+
+/*=======SUCRIPCION A NOTICIAS=======*/
+.container main .container_suscripcion{
+    width: 100%;
+    height: 300px;
+    background: url('../imagenes/parallax.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.container main .container_suscripcion .title{
+    font-size: 3em;
+}
+.container main .container_suscripcion .text{
+    margin: 20px 0px;
+}
+.container main .container_suscripcion form input{
+    color: var(--grisOmedic);
+    width: 300px;
+    background: rgba(255,255,255,.5);
+    font-size: 1.2em;
+    padding: 8px;
+    border-radius: 20px;
+}
+.container main .container_suscripcion form input::placeholder{
+    color: #fff;
+    font-weight: lighter;
+    font-family: 'Raleway';
+}
+.container main .container_suscripcion form input:focus{
+    outline: none;
+}
+.container main .container_suscripcion form button{
+    width: 200px;
+    background: var(--azulOmedic);
+    color: #fff;
+    font-size: 1em;
+    padding: 11px 0px;
+    border-radius: 20px;
 }

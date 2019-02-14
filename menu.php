@@ -4,18 +4,32 @@
     </div>
     <div class="menu">
         <ul class="wrap-menu">
-            <li class="item">INICIO</li>
             <li class="item">
-                SERVICIOS
+                <a href="./" class="<?php echo ($menu == 'principal') ? 'active' : '' ?>">INICIO</a>
+            </li>
+            <li class="item item-menu">
+                <a href="servicios.php" class="<?php echo ($menu == 'servicios') ? 'active' : '' ?>">SERVICIOS</a> 
                     <ul class="sub-menu">
-                        <li class="sub-item">Estudios a Domicilio</li>
-                        <li class="sub-item">Servicios Compartidos</li>
-                        <li class="sub-item">Otros Servicios</li>
+                        <li class="sub-item">
+                            <a href="">Estudios a Domicilio</a>    
+                        </li>
+                        <li class="sub-item">
+                            <a href="">Servicios Compartidos</a>    
+                        </li>
+                        <li class="sub-item">
+                            <a href="">Otros Servicios</a>    
+                        </li>
                     </ul>
             </li>
-            <li class="item">NOSOTROS</li>
-            <li class="item">BLOG</li>
-            <li class="item">CONTACTO</li>
+            <li class="item">
+                <a href="nosotros.php">NOSOTROS</a>    
+            </li>
+            <li class="item">
+                <a href="">BLOG</a>    
+            </li>
+            <li class="item">
+                <a href="">CONTACTO</a>    
+            </li>
         </ul>
     </div>
     <div class="tarjetas">

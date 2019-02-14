@@ -7,8 +7,10 @@
     --azulOmedic: #165E79;
     --rojoOmedic: #99002E;
     --grisOmedic: #464648;
-    --amarilliOmedic: #D8A32D;
+    --amarilloOmedic: #D8A32D;
     --verdeOmedic: #249C7E;
+    --grisClaro: #777;
+    --verdeDoctoralia: rgba(83, 192, 90, 1);
 }
 .container{
     width: 100%;
@@ -20,7 +22,7 @@
 
 .container nav{
     z-index: 9999;
-    background: rgba(255,255,255,.6);
+    background: rgba(255,255,255,.7);
     position: fixed;
     top: 0px;
     width: 100%;
@@ -66,6 +68,22 @@
     display: flex;
     justify-content: center;
 }
+.container nav .menu .wrap-menu > li a{
+    color: var(--grisOmedic);
+    text-decoration: none;
+}
+.container nav .menu .wrap-menu > li a.active{
+    color: var(--rojoOmedic);
+}
+.container nav .menu .wrap-menu > li a:hover{
+    color: var(--rojoOmedic);
+}
+.container nav .menu .wrap-menu > li.item:not(.item-menu):hover{
+    color: var(--rojoOmedic);
+}
+.container nav .menu .wrap-menu > .item .sub-menu .sub-item > a:hover{
+    color: var(--rojoOmedic);
+}
 .container nav .menu .wrap-menu > .item > .sub-menu{
     display: none;
     position: absolute;
@@ -77,7 +95,7 @@
     background: #fff;
     list-style: none;
 }
-.container nav .menu .wrap-menu:hover .item > .sub-menu{
+.container nav .menu .wrap-menu .item-menu:hover > .sub-menu{
     display: block;
     transition: 2s;
 }
