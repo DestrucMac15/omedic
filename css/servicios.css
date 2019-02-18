@@ -170,3 +170,47 @@ main .container_descripcion .servicios > .servicio .texto{
 main .container_descripcion .servicios > .servicio .texto ul{
     margin: 15px 0px;
 }
+
+@media screen and (max-width: 700px){
+    /*======SERVICIOS=======*/
+    main .container_servicios {
+        grid-template-columns: 1em 1fr 1em;
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas: 
+        '. . .'
+        '. servicios .'
+        '. . .';
+    }
+    main .container_servicios .servicios .servicio{
+        width: 100%;
+    }
+    /*=========AGENDE UN SERVICIO======*/
+    main .container_agendar {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'texto' 
+        'imagen'
+        ;
+    }
+    main .container_agendar .texto{
+        padding: 20px;
+    }
+
+    /*=====DESCRIPCION SERVICIOS======*/
+    main .container_descripcion {
+        grid-template-columns: 1em auto 1em;
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas: 
+        '. . .'
+        '. servicios .'
+        '. . .'
+        ;
+    }
+    main .container_descripcion .servicios > .servicio{
+        width: 100%;
+        margin: 20px 0px;
+    }
+}

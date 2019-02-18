@@ -3,7 +3,7 @@ footer{
     background: var(--grisOmedic);
     display: grid;
     grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 50px;
-    grid-template-rows: 20px 1fr 20px;
+    grid-template-rows: 20px auto 20px;
     grid-template-areas:  
     '. . . . . . .'
     '. logo correo telefono informacion sociales .'
@@ -14,11 +14,11 @@ footer{
 }
 footer > div{
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: .8em;
+    padding: 10px;
 }
 footer > div img{
     margin: 0px 5px;
@@ -41,8 +41,29 @@ footer .sociales{
 .copyright{
     font-size: .9em;
     width: 100%;
-    padding: 10px 0px;
+    padding: 10px 10px;
     text-align: center;
     color: #fff;
     background: #333;
+}
+@media screen and (max-width: 1000px){
+    footer{
+        grid-template-columns: 1em auto 1em;
+        grid-template-rows: 20px auto auto auto auto auto 20px;
+        grid-template-areas:  
+        '. . .'
+        '. logo .'
+        '. correo .'
+        '. telefono .'
+        '. informacion .'
+        '. sociales .'
+        '. . .'
+        ;
+    }
+    footer > div{
+        margin: 10px 0px;
+    }
+    .container_form .informacion_contacto .row{
+        width: 100%;
+    }
 }

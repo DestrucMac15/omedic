@@ -100,3 +100,22 @@
 .container_form .informacion_contacto .row img{
     margin: 0px 10px;
 }
+
+@media screen and (max-width: 1100px){
+    .container_form{
+        grid-template-rows: 1em 1fr  1fr 2em;
+        grid-template-columns: 1em 1fr 1em;
+        grid-template-areas:  
+        '. . .'
+        '. informacion .'
+        '. formulario .'
+        '. . .'
+        ;
+    }
+    .container_form .informacion_contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
