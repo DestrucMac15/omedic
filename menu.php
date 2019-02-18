@@ -2,13 +2,13 @@
     <div class="logo">
         <img src="imagenes/logoOmedic.png" alt="Icono de Omedic">
     </div>
-    <div class="menu">
+    <div class="menu oculto">
         <ul class="wrap-menu">
             <li class="item">
                 <a href="./" class="<?php echo ($menu == 'principal') ? 'active' : '' ?>">INICIO</a>
             </li>
             <li class="item item-menu">
-                <a href="servicios.php" class="<?php echo ($menu == 'servicios') ? 'active' : '' ?>">SERVICIOS</a> 
+                <a href="servicios.php" class="<?php echo ($menu == 'servicios') ? 'active' : '' ?>">SERVICIOS</span></a> 
                     <ul class="sub-menu">
                         <li class="sub-item">
                             <a href="estudios-a-domicilio.php">Estudios a Domicilio</a>    
@@ -22,13 +22,13 @@
                     </ul>
             </li>
             <li class="item">
-                <a href="nosotros.php">NOSOTROS</a>    
+                <a href="nosotros.php" class="<?php echo ($menu == 'nosotros') ? 'active' : '' ?>">NOSOTROS</a>    
             </li>
             <li class="item">
                 <a href="">BLOG</a>    
             </li>
             <li class="item">
-                <a href="">CONTACTO</a>    
+                <a href="contactanos.php" class="<?php echo ($menu == 'contactanos') ? 'active' : '' ?>">CONTACTO</a>    
             </li>
         </ul>
     </div>
@@ -42,5 +42,8 @@
     <div class="telefono">
         <div class="texto">Oficinas 24hrs <br> (55) 4170 8797</div>
         <div class="icono"><i class="fas fa-phone"></i></div>
+    </div>
+    <div class="bar">
+        <i class="fas fa-bars" id="btn_menu"></i>
     </div>
 </nav>

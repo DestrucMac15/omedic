@@ -1,0 +1,48 @@
+main .container_imagen{
+    width: 100%;
+    height: 300px;
+    margin-top: 150px;
+}
+main .container_imagen img{
+    width: 100%;
+    height: 100%;
+}
+/*=======BOLSA DE TRABAJO=======*/
+main .container_bolsa{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:  
+    'imagen text'
+    ;
+}
+main .container_bolsa .imagen{
+    width: 100%;
+    height: 100%;
+    grid-area: imagen;
+}
+main .container_bolsa .imagen img{
+    width: 100%;
+    height: 100%;
+}
+main .container_bolsa .texto{
+    width: 100%;
+    height: 100%;
+    grid-area: text;
+    background: var(--verdeOmedic);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+main .container_bolsa .texto .title{
+    font-weight: bold;
+    font-size: 3em;
+}
+main .container_bolsa .texto .subtitle{
+    font-weight: bold;
+    font-size: 1.4em;
+    margin: 20px 0px;
+}

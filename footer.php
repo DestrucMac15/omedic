@@ -13,8 +13,10 @@
             (55) 41708797
     </div>
     <div class="informacion">
-        <img src="imagenes/footer_icon3.png" alt="">
-        Más información
+        <div class="info">
+            <img src="imagenes/footer_icon3.png" alt="">
+            Más información
+        </div>
     </div>
     <div class="sociales">
         <img src="imagenes/footer_icon4.png" alt="">

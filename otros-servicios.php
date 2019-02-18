@@ -19,8 +19,42 @@ $menu = 'servicios';
         
         <main>
             <section class="container_otros">
-                <div class="servicios">
+                <div class="content">
                     <h2 class="title">Otros Servicios</h2>
+                    <div class="servicios">
+                        <div class="servicio">
+                            <img src="imagenes/photo_other_01.png" alt="">
+                            <div class="texto">
+                                <h3 class="title">Check up</h3>
+                                <p>El valor de un diagnóstico oportuno</p>
+                                <p>Conoce más</p>
+                            </div>
+                        </div>
+                        <div class="servicio">
+                            <img src="imagenes/photo_other_02.png" alt="">
+                            <div class="texto">
+                                <h3 class="title">Campañas de salud</h3>
+                                <p>Una población sana es una población productiva</p>
+                                <p>Conoce más</p>
+                            </div>
+                        </div>
+                        <div class="servicio">
+                            <img src="imagenes/photo_other_03.png" alt="">
+                            <div class="texto">
+                                <h3 class="title">Personal por honorario</h3>
+                                <p>Técnicos Radiologos Ing. Biomédicos Médicos especialistas</p>
+                                <p>Conoce más</p>
+                            </div>
+                        </div>
+                        <div class="servicio">
+                            <img src="imagenes/photo_other_04.png" alt="">
+                            <div class="texto">
+                                <h3 class="title">Sociedad Comercial</h3>
+                                <p>Una población sana es una población productiva</p>
+                                <p>Conoce más</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

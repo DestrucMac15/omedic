@@ -1,0 +1,103 @@
+main .container_omedic{
+    width: 100%;
+    height: 400px;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:  
+    'texto imagen'
+    ;
+}
+main .container_omedic .texto{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: var(--azulOmedic);
+    grid-area: texto;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .container_omedic .texto .title{
+    font-weight: bold;
+    font-size: 3em;
+}
+main .container_omedic .texto .text{
+    margin: 20px 0px;
+}
+main .container_omedic .imagen{
+    width: 100%;
+    height: 100%;
+    grid-area: imagen;
+}
+main .container_omedic .imagen img{
+    width: 100%;
+    height: 100%;
+}
+
+/*==========ACERCA DE NOSOTROS=========*/
+main .container_acerca{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    '. . .'
+    '. texto .'
+    '. . .'
+    ;
+}
+main .container_acerca .texto{
+    width: 100%;
+    height: 100%;
+    grid-area: texto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 1fr;
+    grid-template-areas:  
+    'title title'
+    'imagen text'
+    ;
+}
+main .container_acerca .texto .title{
+    width: 100%;
+    height: 100%;
+    grid-area: title;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .container_acerca .texto .title h3{
+    font-size: 2em;
+    margin: 10px 0px;
+}
+main .container_acerca .texto .imagen{
+    width: 100%;
+    height: 100%;
+    grid-area: imagen;
+}
+main .container_acerca .texto .imagen img{
+    width: 100%;
+    height: 100%
+}
+main .container_acerca .texto .text{
+    width: 100%;
+    height: 100%;
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+main .container_acerca .texto .text .subtitle{
+    font-weight: bold;
+    font-size: 2em;
+}
+main .container_acerca .texto .text .mas_servicios{
+    color: var(--rojoOmedic);
+    font-weight: bold;
+    cursor: pointer;
+}

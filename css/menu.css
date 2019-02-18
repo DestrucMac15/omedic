@@ -54,6 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .container nav .menu .wrap-menu{
     display: flex;
@@ -142,4 +143,94 @@
     background: var(--azulOmedic);
     padding:  9px 10px;
     border-radius: 100%;
+}
+.container nav .bar{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    .container nav{
+        grid-template-rows: 1em 1fr 1em;
+        grid-template-columns: 2em 1fr 3fr 1fr 2em;
+        grid-template-areas: 
+            '. . . . .'
+            '. logo menu telefono .'
+            '. . . . .'
+        ;
+        box-shadow: 2px 0px 10px var(--grisOmedic);
+    }   
+    .container nav .tarjetas{
+        display: none;
+    }
+}
+@media screen and (max-width: 1000px){
+    .container nav{
+        grid-template-rows: 1em 1fr 1em;
+        grid-template-columns: 2em 1fr 3fr 2em;
+        grid-template-areas: 
+            '. . . . .'
+            '. logo menu .'
+            '. . . . .'
+        ;
+        box-shadow: 2px 0px 10px var(--grisOmedic);
+    }   
+    .container nav .telefono{
+        display: none;
+    }
+}
+@media screen and (max-width: 800px){
+    .container nav{
+        grid-template-rows: 1em 1fr 1em;
+        grid-template-columns: 2em 1fr 3fr 2em;
+        grid-template-areas: 
+            '. . . . '
+            '. logo bar .'
+            '. . . .'
+        ;
+    }   
+    .container nav .bar{
+        display: flex;
+        grid-area: bar;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 2em;
+    }
+    .container nav .menu{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: #fff;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 300px;
+        height: 150vh;
+        transition: .5s;
+    }
+    .container nav  .oculto{
+        left: -300px;
+        transition: .5s;
+    }
+    .container nav .menu .wrap-menu{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0px;
+    }
+    .container nav .menu .wrap-menu > .item{
+        margin: 0px;
+        width: 100%;
+        padding: 20px 10px;
+        justify-content: flex-start;
+    }
+    .container nav .menu .wrap-menu > .item-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .container nav .menu .wrap-menu > .item > .sub-menu{
+        display: block;
+        position: relative;
+    }
 }
