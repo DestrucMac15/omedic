@@ -117,6 +117,7 @@ main .container_servicios .servicios .servicio .list ul li{
     main .container_servicios .servicios .servicio{
         width: 100%;
         grid-template-rows: auto 1fr;
+        margin: 10px 0px;
     }
     
     main .container_servicios .servicios .servicio .list ul li{

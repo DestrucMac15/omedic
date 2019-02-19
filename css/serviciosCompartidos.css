@@ -155,6 +155,13 @@ main .container_cotizacion button{
     }
 }
 @media screen and (max-width: 500px){
+    main .container_renta .texto{
+        padding: 0px 10px;
+        text-align: center;
+    }
+    main .container_renta .texto p{
+        width: 100%;
+    }
     main .container_animacion .animaciones{
         flex-wrap: wrap;
     }

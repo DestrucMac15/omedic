@@ -46,3 +46,19 @@ main .container_bolsa .texto .subtitle{
     font-size: 1.4em;
     margin: 20px 0px;
 }
+@media screen and (max-width: 900px){
+    main .container_imagen{
+        height: auto;
+    }
+
+    /*=====BOLSA DE TRABAJO=====*/
+    main .container_bolsa{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:  
+        'text'
+        'imagen' 
+        ;
+    }
+}

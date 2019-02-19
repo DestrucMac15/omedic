@@ -189,7 +189,7 @@ main .container_descripcion .servicios > .servicio .texto ul{
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr auto;
         grid-template-areas: 
         'texto' 
         'imagen'

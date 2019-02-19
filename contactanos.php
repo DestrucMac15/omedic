@@ -35,7 +35,7 @@ $menu = 'contactanos';
                     </p>
                 </div>
             </div>
-        </main>
+        </main> 
 
         <?php include('footer.php'); ?>
 
