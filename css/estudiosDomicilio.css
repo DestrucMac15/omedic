@@ -42,7 +42,7 @@ main .container_servicios{
     width: 100%;
     display: grid;
     grid-template-columns: 100px 1fr 100px;
-    grid-template-rows: 50px 1fr 5px;
+    grid-template-rows: 50px 1fr 50px;
     grid-template-areas:  
     '. . .'
     '. servicios .'
@@ -87,4 +87,40 @@ main .container_servicios .servicios .servicio .list ul li{
     width: 50%;
     padding: 0px;
     color: var(--grisClaro);
+}
+ @media screen and (max-width: 900px){
+    main .container_estudios{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        'texto' 
+        'imagen'
+        ;
+    }
+ }
+@media screen and (max-width: 700px){
+    /*========ESTUDIOS======*/
+    main .container_estudios .texto{
+        padding: 20px;
+    }
+
+    /*======SERVICIOS========*/
+    main .container_servicios{
+        grid-template-columns: 1em 1fr 1em;
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas: 
+            '. . .'
+            '. servicios .'
+            '. . .'
+        ;
+    }
+    main .container_servicios .servicios .servicio{
+        width: 100%;
+        grid-template-rows: auto 1fr;
+    }
+    
+    main .container_servicios .servicios .servicio .list ul li{
+        width: 100%;
+        margin: 10px 0px;
+    }
 }
