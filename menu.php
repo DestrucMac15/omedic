@@ -25,7 +25,7 @@
                 <a href="nosotros.php" class="<?php echo ($menu == 'nosotros') ? 'active' : '' ?>">NOSOTROS</a>    
             </li>
             <li class="item">
-                <a href="">BLOG</a>    
+                <a href="blog.php" class="<?php echo ($menu == 'blog') ? 'active' : '' ?>">BLOG</a>    
             </li>
             <li class="item">
                 <a href="contactanos.php" class="<?php echo ($menu == 'contactanos') ? 'active' : '' ?>">CONTACTO</a>    
