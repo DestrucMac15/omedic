@@ -60,3 +60,19 @@ main .container_otros .content .servicios .servicio .texto{
 main .container_otros .content .servicios .servicio .texto p{
     text-align: center;
 }
+@media screen and (max-width: 900px){
+    main .container_otros{
+        grid-template-columns: 1em 1fr 1em;
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas: 
+        '. . .'
+        '. content .'
+        '. . .'
+        ;
+    }
+}
+@media screen and (max-width: 500px){
+    main .container_otros .content .servicios .servicio{
+        width: 100%;
+    }
+}

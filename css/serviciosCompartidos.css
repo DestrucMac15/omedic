@@ -6,7 +6,7 @@ main .container_renta{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:  
-    'texto imagen'
+    'texto imagen' 
     ;
 }
 main .container_renta .texto{
@@ -129,5 +129,39 @@ main .container_cotizacion button{
     }
     100%{
         top: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    main .container_renta{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:  
+        'texto' 
+        'imagen' 
+        ;
+    }
+}
+@media screen and (max-width: 800px){
+    main .container_animacion{
+        grid-template-columns: 1em 1fr 1em;
+        grid-template-rows: 50px 1fr 100px; 
+        grid-template-areas: 
+        '. . .'
+        '. animaciones .'
+        '. . .'
+        ;
+    }
+}
+@media screen and (max-width: 500px){
+    main .container_animacion .animaciones{
+        flex-wrap: wrap;
+    }
+    main .container_animacion .animaciones .animacion{
+        width: 100%;
+    }
+    main .container_cotizacion p{
+        text-align: justify;
     }
 }
