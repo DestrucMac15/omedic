@@ -3,7 +3,7 @@ include('conexi.php');
 $link = Conectarse();
 $respuesta = array();
 $datos = array();
-$query = "SELECT * FROM blogs LEFT JOIN usuarios USING(id_usuario)";
+$query = "SELECT * FROM blogs LEFT JOIN usuarios USING(id_usuario) ORDER BY fecha_blog DESC";
 
 $execute = mysqli_query($link,$query);
 

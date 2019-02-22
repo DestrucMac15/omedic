@@ -1,6 +1,45 @@
 $(document).ready(function(){
+    let id_blog = $('.container').data('id_blog');
+    cargarDetalles(id_blog);
     obtenerBlogs();
 });
+
+
+function cargarDetalles(id_blog){
+    $.ajax({
+        url: 'control/detalleBlog.php',
+        method: 'POST',
+        dataType: 'JSON',
+        data: {id_blog:id_blog}
+    }).done(function(respuesta){
+        if(respuesta.estatus == 'success'){
+            let fecha = obtenerFecha(respuesta.dato.fecha_blog);
+            let contenido_publicacion = `
+            <div class="publicacion" data-id_publicacion='${respuesta.dato.id_blog}'>
+                <div class="public_header">
+                    <h3 class="title descripcion_blog" data-id_blog="${respuesta.dato.id_blog}">
+                        ${respuesta.dato.titulo_blog}
+                    </h3>
+                    <p class="date">
+                        ${fecha} | ${respuesta.dato.nombre_usuario}
+                    </p>
+                </div>
+                <div class="texto">
+                    <div class="imagen">
+                        <img src="imagenes/${respuesta.dato.imagen_blog}" alt="">
+                    </div>
+                    <div class="container">
+                        ${respuesta.dato.contenido_blog}
+                    </div>
+                </div>
+            </div> 
+            `;
+            $('.container_publicaciones').html(contenido_publicacion);
+        }else{
+
+        }
+    });
+}
 
 function obtenerBlogs(){
     $.ajax({
@@ -13,29 +52,6 @@ function obtenerBlogs(){
             let entradas = '';
             $.each(respuesta.datos,function(index,element){
                 let formatFecha = obtenerFecha(element.fecha_blog);
-                contenido += `
-                <div class="publicacion" data-id_publicacion='${element.id_blog}'>
-                    <div class="public_header">
-                        <h3 class="title descripcion_blog" data-id_blog="${element.id_blog}">
-                            ${element.titulo_blog}
-                        </h3>
-                        <p class="date">
-                            ${formatFecha} | ${element.nombre_usuario}
-                        </p>
-                    </div>
-                    <div class="imagen">
-                        <img src="imagenes/${element.imagen_blog}" alt="">
-                    </div>
-                    <div class="texto">
-                        <p class="text">
-                            ${element.resumen_blog}
-                        </p>
-                        <p>
-                            <button class="descripcion_blog" data-id_blog="${element.id_blog}">LEER MÁS</button>
-                        </p>
-                    </div>
-                </div>
-                `;
                 entradas += `
                 <div class="entrada descripcion_blog" data-id_blog="${element.id_blog}">
                     <div class="imagen">
@@ -48,7 +64,6 @@ function obtenerBlogs(){
                 </div>
                 `;
             });
-            $('#container_publicaciones').html(contenido);
             $('#container_entradas').html(entradas);
         }else{
             console.log(respuesta.erno);
@@ -59,7 +74,6 @@ function obtenerBlogs(){
             let id_blog = $(this).data('id_blog');
             location.href = "detalle_blog.php?blog="+id_blog;
         });
-        
     });
 }
 
