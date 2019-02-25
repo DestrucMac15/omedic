@@ -116,7 +116,7 @@ $menu = 'principal';
                             Para agendar un servicio y para conocer como ayudarte
                         </p>
                         <button class="btn_visitanos">
-                            VISITANOS
+                            VISÍTANOS
                         </button>
                     </div>
                 </div>

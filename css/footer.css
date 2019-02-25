@@ -20,8 +20,12 @@ footer > div{
     font-size: .8em;
     padding: 10px;
 }
-footer > div img{
-    margin: 0px 5px;
+footer > div img,
+footer > div i{
+    margin: 5px;
+}
+footer > div i{
+    font-size: 1.7em;
 }
 footer .logo{
     grid-area: logo;
@@ -62,6 +66,11 @@ footer .sociales{
     }
     footer > div{
         margin: 10px 0px;
+    }
+    footer > div:not(.sociales){
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
     .container_form .informacion_contacto .row{
         width: 100%;

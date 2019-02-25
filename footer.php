@@ -3,20 +3,18 @@
         <img src="imagenes/logo_negative.png" alt="">
     </div>
     <div class="correo">
-        <img src="imagenes/footer_icon1.png" alt="">
+        <i class="fas fa-envelope"></i>
         contacto@omedic.com.mx
     </div>
     <div class="telefono">
-        <img src="imagenes/footer_icon2.png" alt="">
+        <i class="fas fa-phone"></i>
             Atención 24 horas
             CMDX Y Área Metropolitana
             (55) 41708797
     </div>
     <div class="informacion">
-        <div class="info">
-            <img src="imagenes/footer_icon3.png" alt="">
+            <i class="fas fa-info-circle"></i>
             Más información
-        </div>
     </div>
     <div class="sociales">
         <img src="imagenes/footer_icon4.png" alt="">

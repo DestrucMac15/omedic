@@ -1,6 +1,6 @@
 <nav>
     <div class="logo">
-        <img src="imagenes/logoOmedic.png" alt="Icono de Omedic">
+       <a href="./"> <img src="imagenes/logoOmedic.png" alt="Icono de Omedic"></a>
     </div>
     <div class="menu oculto">
         <ul class="wrap-menu">
