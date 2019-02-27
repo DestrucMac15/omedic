@@ -1,0 +1,91 @@
+*{
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --azulOmedic: #165E79;
+    --rojoOmedic: #99002E;
+    --grisOmedic: #464648;
+    --amarilloOmedic: #D8A32D;
+    --verdeOmedic: #249C7E;
+    --grisClaro: #777;
+    --verdeDoctoralia: rgba(83, 192, 90, 1);
+}
+body{
+    background: var(--azulOmedic);
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway';
+} 
+
+.card{
+    width: 500px;
+    background: #fff;
+    margin-top: 100px;
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+.card .head-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card .body-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card .body-card form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card .body-card form .form-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+.card .body-card form .form-group label{
+    font-size: 1.2em;
+    margin: 10px 0px;
+    color: var(--grisClaro);
+    padding-left: 50px;
+}
+.card .body-card form .form-group .input{
+    width: 100%;
+    display: flex;
+}
+.card .body-card form .form-group .input i{
+    color: var(--azulOmedic);
+    margin: 0px 15px;
+    font-size: 1.5em;
+}
+.card .body-card form .form-group .input input{
+    font-family: 'Raleway';
+    width: 100%;
+    border-bottom: 1px solid var(--azulOmedic);
+    outline: none;
+    font-size: 1.2em;
+}
+.card .body-card form .form-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+    padding: 0px 30px;
+}
+.card .body-card form .form-button button{
+    background: var(--verdeOmedic);
+    color: #fff;
+    font-family: 'Raleway';
+    padding: 5px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card .body-card form .mensaje{
+    text-align: center;
+    font-weight: bold;
+}

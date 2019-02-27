@@ -1,0 +1,74 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Raleway';
+}
+:root{
+    --azulOmedic: #165E79;
+    --rojoOmedic: #99002E;
+    --grisOmedic: #464648;
+    --amarilloOmedic: #D8A32D;
+    --verdeOmedic: #249C7E;
+    --grisClaro: #777;
+    --verdeDoctoralia: rgba(83, 192, 90, 1);
+}
+.main_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main_container nav{
+    background: #152239; 
+    color: #fff;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_container nav .wrap-menu,
+.main_container nav .options{
+    display: flex;
+}
+.main_container nav .wrap-menu a{
+    text-decoration: none;
+    color: #fff;
+}
+.main_container nav .wrap-menu .item,
+.main_container nav .options .item{
+    list-style: none;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.main_container nav .wrap-menu .item:hover{
+    background: rgba(255,255,255,.4);
+    transition: .3s;
+}
+.main_container nav .wrap-menu .active{
+    background: rgba(255,255,255,.4);
+    color: #fff;
+}
+.main_container nav .options .item-options{
+    position: relative;
+}
+.main_container nav .options .item-options .container_options{
+    display: none;
+    position: absolute;
+    width: 200px;
+    background: #fff;
+    left: -150px;
+    top: 55px;
+    box-shadow: 1px 1px 5px #999;
+}
+.main_container nav .options .item-options .container_options a,
+.main_container nav .options .item-options .container_options .sub-item{
+    color: var(--grisClaro);
+    text-decoration: none;
+}
+.main_container nav .options .item-options .container_options .sub-item{
+    list-style: none;
+    padding: 10px;
+}
+.main_container nav .options .item-options .container_options .sub-item:hover{
+    color: var(--verdeOmedic);
+    background: #eee;
+}
