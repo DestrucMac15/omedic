@@ -17,29 +17,6 @@ if(isset($_GET['blog'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    
-    <meta name="description" 				content="<?php echo $row['titulo_blog'];?>">
-    <meta name="author" 					content="<?php echo $row['nombre_usuario']; ?>">
-    <meta property="og:locale" 				content="en_EN"/>
-    <meta property="og:type" 				content="article"/>
-    <meta property="og:title" 				content="<?php echo $row['titulo_blog'];?>"/>
-    <meta property="og:description" 		content="<?php echo $row['resumen_blog'];?>"/>
-    <meta property="og:url" 				content="http://localhost/colibri/omedic/detalle_blog.php?blog=<?php echo $row['id_blog']; ?>"/>
-    <meta property="og:site_name" 			content="localhost"/>
-    <meta property="article:publisher" 		content="https://www.facebook.com/ejemplo"/>
-    <meta property="article:published_time" content="2015-12-10T02:05:30Z"/>
-    <meta property="og:image" 				content="http://mahcode.com/share_article/teaser-jon-snow.jpg"/>
-    
-
-    <meta name="twitter:title" 				content="Game of Thrones Season 6: Tease"/>
-    <meta name="twitter:description" 		content="The first thing Game Of Thrones released to tease its upcoming sixth season was a poster featuring Jon Snow."/>
-    <meta name="twitter:image" 				content="http://mahcode.com/share_article/teaser-jon-snow.jpg"/>
-    <meta name="twitter:site" 				content="@itsmahcode"/>
-    <meta name="twitter:creator" 			content="@itsmahcode"/>
-    <meta name="twitter:via" 				content="itsmahcode"/>
-    <meta name="twitter:card" 				content="photo"/>
-    <meta name="twitter:url" 				content="http://mahcode.com/share_article/"/>
 
     <title>OMEDIC | Ciudad de México | Ultrasonidos a Domicilio</title>
     <?php include('styles.php'); ?>
@@ -54,24 +31,26 @@ if(isset($_GET['blog'])){
         <main> 
             <div class="container_principal">
                 <div class="container_publicaciones" id="container_publicaciones">
-                    <section class="publicacion" data-id_publicacion='<?php echo $row['id_blog'];?>'>
+                    <article itemscope class="publicacion" data-id_publicacion='<?php echo $row['id_blog'];?>'>
+                        <link itemprop="audience" href="http://schema.org/Clinician"/>
+                        <meta itemprop="publicationType" content="Meta-Analysis"/>
                         <div class="public_header">
-                            <h3 class="title descripcion_blog" data-id_blog="<?php echo $row['id_blog'];?>">
+                            <h1 itemprop="name" class="title descripcion_blog" data-id_blog="<?php echo $row['id_blog'];?>">
                                 <?php echo $row['titulo_blog'];?>
-                            </h3>
-                            <p class="date">
+                            </h1>
+                            <p class="date" itemprop="autor">
                                 <?php echo $row['nombre_usuario'];?>
                             </p>
                         </div>
                         <div class="texto">
                             <div class="imagen">
-                                <img src="imagenes/<?php echo $row['imagen_blog'];;?>" alt="">
+                                <img itemprop="image" alt="<?php echo $row['titulo_blog'];?>" src="imagenes/<?php echo $row['imagen_blog'];;?>" alt="">
                             </div>
-                            <div class="container">
+                            <div class="container" itemprop="description">
                                 <?php echo $row['contenido_blog'];?>
                             </div>
                         </div>
-                    </section> 
+                    </article> 
                 </div>
                 
                 <div class="container_entradas">

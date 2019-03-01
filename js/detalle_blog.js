@@ -1,6 +1,5 @@
 $(document).ready(function(){
     let id_blog = $('.container').data('id_blog');
-    //cargarDetalles(id_blog);
     obtenerBlogs();
     cargarComentarios(id_blog); 
 
@@ -38,42 +37,6 @@ $(document).ready(function(){
     });
 });
 
-/*=======FUNCION DE CARGAR DETALLES DEL BLOG=======*/
-function cargarDetalles(id_blog){
-    $.ajax({
-        url: 'control/detalleBlog.php',
-        method: 'POST',
-        dataType: 'JSON',
-        data: {id_blog:id_blog}
-    }).done(function(respuesta){
-        if(respuesta.estatus == 'success'){
-            let fecha = obtenerFecha(respuesta.dato.fecha_blog);
-            let contenido_publicacion = `
-            <section class="publicacion" data-id_publicacion='${respuesta.dato.id_blog}'>
-                <div class="public_header">
-                    <h3 class="title descripcion_blog" data-id_blog="${respuesta.dato.id_blog}">
-                        ${respuesta.dato.titulo_blog}
-                    </h3>
-                    <p class="date">
-                        ${fecha} | ${respuesta.dato.nombre_usuario}
-                    </p>
-                </div>
-                <div class="texto">
-                    <div class="imagen">
-                        <img src="imagenes/${respuesta.dato.imagen_blog}" alt="">
-                    </div>
-                    <div class="container">
-                        ${respuesta.dato.contenido_blog}
-                    </div>
-                </div>
-            </section> 
-            `;
-            $('.container_publicaciones').html(contenido_publicacion);
-        }else{
-            console.log(respuesta.erno);
-        }
-    });
-}
 
 /*======CARGAR COMENTARIOS=======*/
 function cargarComentarios(id_blog){

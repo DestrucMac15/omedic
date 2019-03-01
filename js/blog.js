@@ -14,7 +14,7 @@ function obtenerBlogs(){
             $.each(respuesta.datos,function(index,element){
                 let formatFecha = obtenerFecha(element.fecha_blog);
                 contenido += `
-                <div class="publicacion" data-id_publicacion='${element.id_blog}'>
+                <article class="publicacion" data-id_publicacion='${element.id_blog}'>
                     <div class="public_header">
                         <h3 class="title descripcion_blog" data-id_blog="${element.id_blog}">
                             ${element.titulo_blog}
@@ -34,7 +34,7 @@ function obtenerBlogs(){
                             <button class="descripcion_blog" data-id_blog="${element.id_blog}">LEER MÁS</button>
                         </p>
                     </div>
-                </div>
+                </article>
                 `;
                 entradas += `
                 <div class="entrada descripcion_blog" data-id_blog="${element.id_blog}">
