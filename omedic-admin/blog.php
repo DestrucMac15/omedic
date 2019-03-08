@@ -22,35 +22,22 @@
             <div class="container_blog">
                 <div class="title">
                     <h3>ENTRADAS DEL BLOG</h3>
+                    <form action="" id="form_blog">
+                        <input type="text" id="busqueda_blog" placeholder="Buscar entrada">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
                 </div>
-                <div class="list_blogs">
-                    <div class="blog">
-                        <div class="imagen">
-                            <img src="../imagenes/entrada2.jpg" alt="">
-                        </div>
-                        <div class="title_blog">
-                            <span>Hola que hace</span> (esto se trata de otra cosa)
-                        </div>
-                        <div class="controles">
-                            <i class="fas fa-pencil-alt"></i>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <div class="imagen">
-                            <img src="../imagenes/entrada1.gif" alt="">
-                        </div>
-                        <div class="title_blog">
-                            <span>Hola que hace</span> (Esto se trata de algo)
-                        </div>
-                        <div class="controles">
-                            <i class="fas fa-pencil-alt"></i>
-                        </div>
-                    </div>
+                <div class="list_blogs" id="list_blogs">
+                   
                 </div>
+                <div id="mensaje"></div>
             </div>
         </div>
     </div>
 
+    <button class="nueva_entrada" title="Nueva Entrada"><i class="fas fa-plus"></i></button>
+
     <?php include('scripts.php'); ?>
+    <script src="js/blog.js"></script>
 </body>
 </html>

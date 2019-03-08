@@ -1,6 +1,6 @@
 div#slider{ 
     overflow: hidden; 
-    height: 89%;
+    height: 100vh;
 }
 div#slider figure img{ 
     width: 33.333%; 

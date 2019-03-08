@@ -9,7 +9,7 @@
     <div class="telefono">
         <i class="fas fa-phone"></i>
             Atención 24 horas
-            CMDX Y Área Metropolitana
+            CDMX Y Área Metropolitana
             (55) 41708797
     </div>
     <div class="informacion">

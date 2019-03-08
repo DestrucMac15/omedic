@@ -78,7 +78,7 @@ $menu = 'principal';
                                 Servicio de Primera Calidad
                             </h3>
                             <p class="txt">
-                                Especilistas en pacientes gediátricos, oncológicos y baríatricos.
+                                Especilistas en pacientes geriátricos, oncológicos y bariátricos.
                                 Con trato personalizado, buscamos la comodidad y seguridad del 
                                 paciente, en servicios de rápida respuesta.
                             </p>
@@ -98,7 +98,7 @@ $menu = 'principal';
                             corta estancia, clínicas de homodiálisis  y otros 
                             proveedores de servicios de salud.
                         </p>
-                        <button class="btn_conoceMas">
+                        <button class="btn_conoceMas servicio_link" data-servicio="servicios-compartidos.php">
                             CONOCE MÁS
                         </button>
                     </div>
@@ -107,7 +107,7 @@ $menu = 'principal';
                     </div>
                 </div>
                 <div class="imagen_doctoralia">
-                    <img src="imagenes/doctoralia.jpg" alt="">
+                    <img src="imagenes/Doctoralia.jpg" alt="">
                     <div class="texto">
                         <h3 class="title">
                             Estamos en Doctoralia
@@ -115,7 +115,7 @@ $menu = 'principal';
                         <p class="txt">
                             Para agendar un servicio y para conocer como ayudarte
                         </p>
-                        <button class="btn_visitanos">
+                        <button class="btn_visitanos servicio_link" data-servicio="https://www.doctoralia.com.mx/centro-medico/omedic-2544576">
                             VISÍTANOS
                         </button>
                     </div>
@@ -132,9 +132,9 @@ $menu = 'principal';
                 <p class="text">
                     Únete a nuestra lista de correo y recibe nuestras promociones
                 </p>
-                <form action="">
+                <form id="form_suscribete">
                     <div class="row">
-                        <input type="email" placeholder="nombre@correo.com">
+                        <input type="email" placeholder="nombre@correo.com" required>
                         <button type="submit">SUSCRIBETE</button>
                     </div>
                 </form>
@@ -146,5 +146,6 @@ $menu = 'principal';
     </div>
    
     <?php include('scripts.php'); ?>
+    <script src="js/links.js"></script>
 </body>
 </html>

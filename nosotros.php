@@ -41,7 +41,7 @@ $menu = 'nosotros';
                         <div class="subtitle">Servicios a Domicilio</div>
                         <p>
                             OMEDIC es una empresa innovadora en el ramo de 
-                            servicios médicos diagnósticos, fundada en 2016 
+                            servicios médicos diagnósticos, fundada en 2015 
                             por un grupo de ingenieros biomédicos, químicos y 
                             médicos especialistas que busca generar 
                             accesibilidad a la tecnología médica para mejorar 
@@ -57,7 +57,7 @@ $menu = 'nosotros';
                             atender las necesidades desde un consultorio 
                             particular hasta hospitales.
                         </p>
-                        <p class="mas_servicios">
+                        <p class="mas_servicios servicio_link" data-servicio="servicios.php">
                             Conoce nuestros servicios
                         </p>
                     </div>

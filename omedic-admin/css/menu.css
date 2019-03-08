@@ -58,6 +58,7 @@
     left: -150px;
     top: 55px;
     box-shadow: 1px 1px 5px #999;
+    z-index: 100;
 }
 .main_container nav .options .item-options .container_options a,
 .main_container nav .options .item-options .container_options .sub-item{

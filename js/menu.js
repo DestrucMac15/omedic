@@ -3,5 +3,8 @@ $(document).ready(function(){
         $('.menu').toggleClass('oculto');
     });
 
-    
+    $('.servicio_link').click(function(){
+        let link = $(this).data('servicio');
+        location.href = link;
+    });
 });

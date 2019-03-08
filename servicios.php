@@ -20,7 +20,7 @@ $menu = 'servicios';
         <main>
             <section class="container_servicios">
                 <div class="servicios">
-                    <div class="servicio">
+                    <div class="servicio servicio_link" data-servicio="estudios-a-domicilio.php">
                         <div class="imagen">
                             <img src="imagenes/icon_serv_01.png" alt="">
                         </div>
@@ -33,13 +33,13 @@ $menu = 'servicios';
                         <div class="texto">
                             <ul>
                                 <li>Laboratorios</li>
-                                <li>Ultrasonidos Convenientes</li>
+                                <li>Ultrasonidos Convencionales</li>
                                 <li>Ultrasonidos Doppler</li>
                                 <li>Cardiología</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="servicio">
+                    <div class="servicio servicio_link" data-servicio="servicios-compartidos.php">
                         <div class="imagen">
                             <img src="imagenes/icon_serv_02.png" alt="">
                         </div>
@@ -58,7 +58,7 @@ $menu = 'servicios';
                             </ul>
                         </div>
                     </div>
-                    <div class="servicio">
+                    <div class="servicio servicio_link" data-servicio="otros-servicios.php">
                         <div class="imagen">
                             <img src="imagenes/icon_serv_03.png" alt="">
                         </div>
@@ -75,12 +75,12 @@ $menu = 'servicios';
                                     chequeos empresariales
                                     médicos, personal capacitado
                                     o soluciones de ingeniería
-                                    biométrica?
+                                    biomédica?
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="servicio">
+                    <div class="servicio servicio_link" data-servicio="https://www.doctoralia.com.mx/centro-medico/omedic-2544576">
                         <div class="imagen">
                             <img src="imagenes/icon_serv_04.png" alt="">
                         </div>
@@ -112,7 +112,7 @@ $menu = 'servicios';
                         ayudarle, póngase en contacto con alguno de nuestros 
                         especialistas.
                     </p>
-                    <button>AGENDAR</button>
+                    <button class="servicio_link" data-servicio="contactanos.php">AGENDAR</button>
                 </div>
                 <div class="imagen">
                     <img src="imagenes/photo_serr.jpg" alt="">
@@ -170,9 +170,9 @@ $menu = 'servicios';
                         <h3 class="title">Servicios Especiales</h3>
                         <div class="texto">
                             <p>
-                            Check ups laborales para empresas 
-                            Campañas de salud
-                            Check ups personales por especialidad
+                            Checkup's para empresas<br> 
+                            Campañas de salud<br>
+                            Checkup's personales por especialidad
                             </p>
                             <ul>
                                 <li>Nefrología, Cardiología, Vasculares, Hernia, etc.</li>
