@@ -33,7 +33,9 @@ function listarBlogs(){
                     contenido += `
                         <div class="blog" data-id_blog='${element.id_blog}'>
                             <div class="nombre_blog">
-                                <a href="detalle_blog.php?id_blog=${element.id_blog}" class="name_blog">${element.titulo_blog}</a>
+                                <a href="detalle_blog.php?id_blog=${element.id_blog}" class="name_blog">
+                                    ${element.titulo_blog} <i class="fas fa-edit"></i>
+                                </a>
                             </div>
                             <div class="usuario">
                                 ${element.nombre_usuario}

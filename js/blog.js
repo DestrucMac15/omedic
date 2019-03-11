@@ -24,7 +24,7 @@ function obtenerBlogs(){
                         </p>
                     </div>
                     <div class="imagen">
-                        <img src="imagenes/${element.imagen_blog}" alt="">
+                        <img src="imagenes/blog/${element.imagen_blog}" alt="">
                     </div>
                     <div class="texto">
                         <p class="text">
@@ -39,7 +39,7 @@ function obtenerBlogs(){
                 entradas += `
                 <div class="entrada descripcion_blog" data-id_blog="${element.id_blog}">
                     <div class="imagen">
-                        <img src="imagenes/${element.imagen_blog}" alt="">
+                        <img src="imagenes/blog/${element.imagen_blog}" alt="">
                     </div>
                     <div class="texto">
                         ${element.titulo_blog}

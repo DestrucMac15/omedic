@@ -44,7 +44,7 @@ if(isset($_GET['blog'])){
                         </div>
                         <div class="texto">
                             <div class="imagen">
-                                <img itemprop="image" alt="<?php echo $row['titulo_blog'];?>" src="imagenes/<?php echo $row['imagen_blog'];;?>" alt="">
+                                <img itemprop="image" alt="<?php echo $row['titulo_blog'];?>" src="imagenes/blog/<?php echo $row['imagen_blog'];;?>" alt="">
                             </div>
                             <div class="container" itemprop="description">
                                 <?php echo $row['contenido_blog'];?>

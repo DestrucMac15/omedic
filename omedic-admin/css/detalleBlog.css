@@ -9,3 +9,54 @@
     '. . .'
     ;
 }
+.container .container_blog{
+    grid-area: blog;
+    width: 100%;
+}
+.container .container_blog .title{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.container .container_blog .edition_blog{
+    width: 100%;
+}
+/*=====FORMULARIO=======*/
+.container .container_blog .edition_blog form .form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+}
+.container .container_blog .edition_blog form .row-imagen{
+    display: flex;
+    justify-content: flex-end;
+}
+.container .container_blog .edition_blog form .row-imagen img{
+    width: 300px;
+    border: 2px solid var(--rojoOmedic);
+}
+.container .container_blog .edition_blog form .form-group label{
+    font-weight: bold;
+    margin: 5px 0px;
+}
+.container .container_blog .edition_blog form .form-group input,
+.container .container_blog .edition_blog form .form-group textarea{
+    border: 1px solid var(--azulOmedic);
+    outline: none;
+    padding: 5px;
+    font-weight: bold;
+}
+.container .container_blog .edition_blog form .form-group textarea{
+    resize: vertical;
+}
+.container .container_blog .edition_blog form .form-group button{
+    cursor: pointer;
+    width: 150px;
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+    font-family: 'Raleway';
+    background: var(--rojoOmedic);
+    color: #fff;    
+    border-radius: 10px;
+}
