@@ -35,7 +35,11 @@
         </div>
     </div>
 
-    <button class="nueva_entrada" title="Nueva Entrada"><i class="fas fa-plus"></i></button>
+    <a href="nuevo_blog.php">
+        <button class="nueva_entrada" title="Nueva Entrada" id="btn_nuevaEntrada"><i class="fas fa-plus"></i></button>
+    </a>
+
+  
 
     <?php include('scripts.php'); ?>
     <script src="js/blog.js"></script>

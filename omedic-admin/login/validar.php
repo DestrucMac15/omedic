@@ -29,10 +29,12 @@
             $id_usuario = $row['id_usuario'];
             $usuario = $row['nick_usuario'];
             $nombre = $row['nombre_usuario'];
+            $correo = $row['correo_usuario'];
 
             $_SESSION["id_usuario"] = $id_usuario or die("Error al asignar id usuario");
             $_SESSION["nick_usuario"] = $usuario or die("Error al iniciar usuario");
             $_SESSION["nombre_usuario"] = $nombre or die("Error al iniciar nombre del usuario");
+            $_SESSION["correo_usuario"] = $correo or die("Error al iniciar correo del usuario");
 
             $respuesta['login'] = 'valido';
         }else{

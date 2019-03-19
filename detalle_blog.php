@@ -53,14 +53,6 @@ if(isset($_GET['blog'])){
                     </article> 
                 </div>
                 
-                <div class="container_entradas">
-                    <div class="title">
-                        Entradas recientes
-                    </div>
-                    <div class="entradas" id="container_entradas">
-                        
-                    </div>
-                </div>
                 <div class="container_comentarios">
                     <h3 class="title">
                         Comentarios
@@ -89,15 +81,6 @@ if(isset($_GET['blog'])){
                             <div class="mensaje" style="padding: 0px 50px;">
                                 
                             </div>
-                            <!-- Buttons, Copy this to your Page Article -->
-                            <div class="share-buttons-row" style="padding: 0px 50px; display: flex; justify-content: center;">
-                                <!--Facebook's Button -->
-                                <div class="share-fb"></div>
-                                <!--Twitter's Button -->
-                                <div class="share-twitter"></div>
-                                <!--Linkedin's Button -->
-                                <div class="share-linkedin"></div>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -109,7 +92,6 @@ if(isset($_GET['blog'])){
     </div>
    
     <?php include('scripts.php'); ?>
-    <script src="libs/functions.js"></script>
     <script src="js/detalle_blog.js"></script>
 </body>
 </html>

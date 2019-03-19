@@ -41,10 +41,12 @@ function listarBlogs(){
                                 ${element.nombre_usuario}
                             </div>
                             <div class="comentario_blog">
-                                <i class="fas fa-comment-alt"></i> ${element.num_comentarios}    
+                                <a href="detalle_blog.php?id_blog=${element.id_blog}" class="coment_blog">
+                                    <i class="fas fa-comment-alt"></i> ${element.num_comentarios}    
+                                </a>
                             </div>
-                            <div class="fecha_blog">
-                                ${formatFecha}
+                            <div class="fecha_blog">                                
+                                    ${formatFecha}
                             </div>
                         </div>
                     `;

@@ -9,7 +9,7 @@ $query = "SELECT
 id_blog,
 titulo_blog,
 nombre_usuario,
-count(*) as num_comentarios,
+count(id_comentario) as num_comentarios,
 fecha_blog
 FROM
 	blogs

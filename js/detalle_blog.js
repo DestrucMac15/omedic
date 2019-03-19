@@ -25,6 +25,7 @@ $(document).ready(function(){
                 `);
                 let id_blog = $('.container').data('id_blog');
                 cargarComentarios(id_blog);
+                $('#form_comentario')[0].reset();
             }else{
                 //console.log(respuesta.erno);
                 $('.mensaje').html(`
@@ -60,7 +61,7 @@ function cargarComentarios(id_blog){
                             <i class="fas fa-user-circle"></i>
                         </div>
                         <div class="datos">
-                            <p class="nombre">${element.nombre_comentario}</p>
+                            <p class="nombre">${element.nombre_comentario} ${element.tipo_usuario == 'admin' ? '<i class="fas fa-star" style="color: yellow;"></i>' : ''}</p>
                             <p class="fecha">${fecha}</p>   
                         </div>
                         <div class="texto">
@@ -95,6 +96,7 @@ function cargarComentarios(id_blog){
 
 /*=======FUNCTION DE OBTENER BLOGS========*/
 function obtenerBlogs(){
+    alert();
     $.ajax({
         url: 'control/obtenerBlogs.php',
         method: 'POST',

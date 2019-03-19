@@ -91,6 +91,12 @@
     width: 100%;
     grid-area: comentario;
     text-align: center;
+}
+.container .container_blog .list_blogs .blog .comentario_blog .coment_blog{
+    color: #aaa;
+    text-decoration: none;
+}
+.container .container_blog .list_blogs .blog .comentario_blog .coment_blog:visited{
     color: #aaa;
 }
 .container .container_blog .list_blogs .blog .comentario_blog:hover{

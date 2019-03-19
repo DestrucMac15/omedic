@@ -60,3 +60,200 @@
     color: #fff;    
     border-radius: 10px;
 }
+
+/*====COMENTARIOS=====*/
+.container .container_blog .container_comentarios{
+    width: 100%;
+}
+.container_comentarios .title{
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 2em;
+}.container_comentarios .comentarios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container_comentarios .comentarios .comentario{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1em 60px 1fr;
+    grid-template-rows: 60px 1fr auto;
+    grid-template-areas:  
+    '. imagen datos .'
+    '. . texto .'
+    '. . button .'
+    ;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    margin: 10px 0px;
+}
+.container_comentarios .comentarios .comentario .imagen{
+    width: 100%;
+    height: 100%;
+    grid-area: imagen;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.container_comentarios .comentarios .comentario .datos{
+    width: 100%;
+    grid-area: datos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+.container_comentarios .comentarios .comentario .datos .nombre{
+    font-size: .9em;
+    font-weight: bold;
+}
+.container_comentarios .comentarios .comentario .datos .fecha{
+    font-size: .9em;
+}
+.container_comentarios .comentarios .comentario .texto{
+    width: 100%;
+    grid-area: texto;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container_comentarios .comentarios .comentario .button{
+    width: 100%;
+    padding: 10px 0px;
+    grid-area: button;
+    display: flex;
+    justify-content: flex-end;
+}
+.container_comentarios .comentarios .comentario .button button{
+    width: 100px;
+    padding: 5px 10px;
+    position: relative;
+    right: 10px;
+    background: var(--rojoOmedic);
+    color: #fff;
+    font-family: 'Raleway';
+    border-radius: 5px;
+    cursor: pointer;
+}
+ .container_comentarios .comentarios .no_comentarios{
+    padding: 20px 0px;
+}
+.container_comentarios .comentarios .no_comentarios h3{
+    text-align: center;
+}
+/*=====FORM COMENTARIO=====*/
+.container_comentarios .form_comentario{
+    width: 100%;
+    background: #eee;
+    padding: 20px 0px;
+}
+.container_comentarios .form_comentario .title{
+    padding: 20px 50px;
+}
+.container_comentarios .form_comentario .form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px;
+    margin: 20px 0px;
+}
+ .container_comentarios .form_comentario .button{
+    display: flex;
+    align-items: flex-end;
+}
+ .container_comentarios .form_comentario .button button{
+    width: 130px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #fff;
+    background: var(--rojoOmedic);
+    font-family: 'Raleway';
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+ .container_comentarios .form_comentario .form-group textarea{
+    padding: 5px;
+    font-family: 'Raleway';
+    color: var(--grisClaro);
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+.container_comentarios .form_comentario .form-group textarea{
+    resize: none;
+    height: 80px;
+}
+
+/*========PUBLICACIONES======*/
+.container_publicaciones{
+    width: 100%;
+    height: 100%;
+    grid-area: publicaciones;
+}
+.container_publicaciones .publicacion{
+    width: 100%;
+    margin-bottom: 20px;
+    background: #eee;
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-rows: 1em 100px auto 1em;
+    grid-template-areas:
+    '. . .'
+    '. header .'
+    '. texto .'
+    '. . .'
+    ;
+}
+ .container_publicaciones .publicacion .public_header{
+    width: 100%;
+    height: 100%;
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+ .container_publicaciones .publicacion .public_header .title{
+    font-weight: lighter;
+    font-size: 2em; 
+}
+.container_publicaciones .publicacion .public_header .date{
+    font-size: .8em;
+}
+ .container_publicaciones .publicacion .imagen{
+    width: 100%;
+    height: 100%;
+    grid-area: imagen;
+}
+.container_publicaciones .publicacion .imagen img{
+    width: 100%;
+    height: 100%;
+}
+.container_publicaciones .publicacion .texto{
+    width: 100%;
+    grid-area: texto;
+    padding: 20px;
+    font-size: .9em;
+    display: flex;
+    flex-direction: column;
+}
+.container_publicaciones .publicacion .texto .imagen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container_publicaciones .publicacion .texto .imagen img{
+    width: 50%;
+}
+ .container_publicaciones .publicacion .texto .container{
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+

@@ -5,7 +5,7 @@
     $menu = 'blog';
     if(isset($_GET['id_blog'])){
         $id_blog = $_GET['id_blog'];
-        $query = "SELECT * FROM blogs";
+        $query = "SELECT * FROM blogs WHERE id_blog='$id_blog'";
         $execute = mysqli_query($link,$query);
         if($execute){
             $row = mysqli_fetch_assoc($execute);
@@ -62,6 +62,34 @@
                             <button type="submit">Guardar</button>
                         </div>
                     </form>
+                </div>
+                <div class="container_comentarios">
+                    <div class="title">
+                        <h3>COMENTARIOS DE ESTE POST</h3>
+                    </div>
+                </div>
+                <div class="container_comentarios">
+                    <h3 class="title">
+                        Comentarios
+                    </h3>
+                    <div class="comentarios" id="comentarios">
+                        
+                    </div> 
+                    <div class="form_comentario" id="contenido_comentario">
+                        <div class="title">Responder comentario</div>
+                        <form id="form_comentario">
+                            <div class="form-group">
+                                <label for="">* Mensaje:</label>
+                                <textarea required name="texto_comentario"></textarea>
+                            </div>
+                            <div class="form-group button">
+                                <button type="submit">Comentar</button>
+                            </div>
+                            <div class="mensaje" style="padding: 0px 50px;">
+                                
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
