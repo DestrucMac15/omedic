@@ -9,6 +9,9 @@
         <a href="agenda.php">
             <li class="item <?php echo ($menu == 'agenda') ? 'active': '';?>"><i class="fas fa-calendar-alt"></i> Agenda</li>
         </a>
+        <a href="servicios.php">
+            <li class="item <?php echo ($menu == 'servicios') ? 'active': '';?>"><i class="fas fa-boxes"></i> Servicios</li>
+        </a>
     </ul>
     <ul class="options">
         <li class="item" id="id_usuario" data-nombre_usuario="<?php echo $_SESSION['nombre_usuario']; ?>" data-id_usuario="<?php echo $_SESSION['id_usuario']; ?>" data-correo_usuario="<?php echo $_SESSION['correo_usuario']; ?>">

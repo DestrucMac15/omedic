@@ -19,7 +19,7 @@
         <?php include('menu.php'); ?>
 
         <div class="container">
-            <div class="container_blog">
+            <div class="area">
                 <div class="title">
                     <h3>ENTRADAS DEL BLOG</h3>
                     <form action="" id="form_blog">

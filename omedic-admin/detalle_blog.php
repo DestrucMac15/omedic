@@ -32,7 +32,7 @@
         <?php include('menu.php'); ?>
 
         <div class="container" data-id_blog="<?php echo $id_blog; ?>">
-            <div class="container_blog">
+            <div class="area">
                 <div class="title">
                     <h3>EDITAR BLOG</h3>
                 </div>

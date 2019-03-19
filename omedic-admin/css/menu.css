@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Raleway';
+    box-sizing: border-box;
 }
 :root{
     --azulOmedic: #165E79;
@@ -74,3 +75,25 @@
     background: #eee;
 }
 
+
+/*======CUERPO INICIAL=======*/
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50px auto 100px;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-areas:  
+    '. . .'
+    '. area .'
+    '. . .'
+    ;
+}
+.container .area{
+    grid-area: area;
+    width: 100%;
+}
+.container .area .title{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}

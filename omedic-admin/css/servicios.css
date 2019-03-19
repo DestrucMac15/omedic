@@ -1,0 +1,125 @@
+.container .area .title form{
+    position: relative;
+}
+.container .area .title form input{
+    border: none;
+    background: #eee;
+    padding: 5px;
+    width: 200px;
+}
+.container .area .title form button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    height: 100%;
+    font-size: 1.2em;
+    padding: 0px 5px;
+    cursor: pointer;
+    background: none;
+    color: #aaa; 
+}
+
+.container_servicios{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2em 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:  
+    'servicios . categorias'
+    ;
+}
+.container_servicios .servicios{
+    width: 100%;
+    grid-area: servicios;
+}
+.container_servicios .servicios .lista-servicios{
+    width: 100%;
+    display: flex;
+}
+.container_servicios .servicios .lista-servicios .servicio{
+    width: 28%;
+    height: 300px;
+    margin: 15px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr;
+    grid-template-areas:  
+    'foto'
+    'cuerpo'
+    ;
+    box-shadow: 2px 2px 6px rgb(92, 91, 73);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.container_servicios .servicios .lista-servicios .servicio .foto{
+    width: 100%;
+    grid-area: foto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_servicios .servicios .lista-servicios .servicio .foto img{
+    width: 70%;
+    height: 100%;
+}
+.container_servicios .servicios .lista-servicios .servicio .cuerpo{
+    width: 100%;
+    height: 100%;
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: cuerpo;
+}
+.container_servicios .servicios .lista-servicios .servicio .cuerpo .nombre{
+    font-weight: bold;
+    color: var(--azulOmedic);
+}
+.container_servicios .servicios .lista-servicios .servicio .cuerpo button{
+    width: 70%;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    background: var(--rojoOmedic);
+    font-weight: bold;
+}
+.container_servicios .servicios .lista-servicios .servicio .descripcion{
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.8);
+    color: #000;
+    position: absolute;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: -300px;
+    transition: .5s;
+}
+.container_servicios .servicios .lista-servicios .servicio:hover .descripcion{
+    bottom: 0px;
+    transition: .5s;
+}
+/*========CATEGORIAS=========*/
+.container_servicios .categorias{
+    padding: 0px 10px;
+    width: 100%;
+    height: 200px;
+    grid-area: categorias;
+}
+.container_servicios .categorias .lista-categorias{
+    padding: 10px;
+}
+.container_servicios .categorias .lista-categorias ul li{
+    margin: 5px 0px;
+    color: var(--azulOmedic);
+    font-weight: bold;
+    cursor: pointer;
+}
+.container_servicios .categorias .lista-categorias ul li:hover{
+    color: var(--rojoOmedic);
+}

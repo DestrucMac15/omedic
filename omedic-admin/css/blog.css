@@ -1,33 +1,13 @@
-.container{
-    width: 100%;
-    display: grid;
-    grid-template-rows: 50px auto 100px;
-    grid-template-columns: 100px 1fr 100px;
-    grid-template-areas:  
-    '. . .'
-    '. blog .'
-    '. . .'
-    ;
-}
-.container .container_blog{
-    grid-area: blog;
-    width: 100%;
-}
-.container .container_blog .title{
-    padding: 20px 0px;
-    display: flex;
-    justify-content: space-between;
-}
-.container .container_blog .title form{
+.container .area .title form{
     position: relative;
 }
-.container .container_blog .title form input{
+.container .area .title form input{
     border: none;
     background: #eee;
     padding: 5px;
     width: 200px;
 }
-.container .container_blog .title form button{
+.container .area .title form button{
     position: absolute;
     top: 0px;
     right: 0px;
@@ -40,12 +20,12 @@
     color: #aaa; 
 }
 /*=======LISTA DE BLOGS=======*/
-.container .container_blog .list_blogs{
+.container .area .list_blogs{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.container .container_blog .list_blogs .blog{
+.container .area .list_blogs .blog{
     width: 100%;
     display: grid;
     grid-template-columns: 7fr 1fr 1fr 1fr;
@@ -55,31 +35,31 @@
     ;
     padding: 10px 0px;
 }
-.container .container_blog .list_blogs .blog:not(:last-child){
+.container .area .list_blogs .blog:not(:last-child){
     border-bottom: 1px solid rgba(0,0,0,.2);
 }
-.container .container_blog .list_blogs .blog .nombre_blog{
+.container .area .list_blogs .blog .nombre_blog{
     width: 100%;
     grid-area: nombre;
 }
-.container .container_blog .list_blogs .blog .nombre_blog a{
+.container .area .list_blogs .blog .nombre_blog a{
     text-decoration: none;
     font-weight: bold;
     color: var(--azulOmedic);
     display: flex;
 }
-.container .container_blog .list_blogs .blog .nombre_blog a:visited{
+.container .area .list_blogs .blog .nombre_blog a:visited{
     color: var(--azulOmedic);
 }
-.container .container_blog .list_blogs .blog .nombre_blog a > .fa-edit{
+.container .area .list_blogs .blog .nombre_blog a > .fa-edit{
     display: none;
     margin: 0px 5px;
     transition: .3s;
 }
-.container .container_blog .list_blogs .blog .nombre_blog a:hover > .fa-edit{
+.container .area .list_blogs .blog .nombre_blog a:hover > .fa-edit{
     display: block;
 }
-.container .container_blog .list_blogs .blog .usuario{
+.container .area .list_blogs .blog .usuario{
     width: 100%;
     grid-area: usuario;
     text-align: center;
@@ -87,24 +67,24 @@
     font-weight: bold;
     color: var(--azulOmedic);
 }
-.container .container_blog .list_blogs .blog .comentario_blog{
+.container .area .list_blogs .blog .comentario_blog{
     width: 100%;
     grid-area: comentario;
     text-align: center;
 }
-.container .container_blog .list_blogs .blog .comentario_blog .coment_blog{
+.container .area .list_blogs .blog .comentario_blog .coment_blog{
     color: #aaa;
     text-decoration: none;
 }
-.container .container_blog .list_blogs .blog .comentario_blog .coment_blog:visited{
+.container .area .list_blogs .blog .comentario_blog .coment_blog:visited{
     color: #aaa;
 }
-.container .container_blog .list_blogs .blog .comentario_blog:hover{
+.container .area .list_blogs .blog .comentario_blog:hover{
     color: var(--rojoOmedic);
     transition: .3s;
     cursor: pointer;
 }
-.container .container_blog .list_blogs .blog .fecha_blog{
+.container .area .list_blogs .blog .fecha_blog{
     width: 100%;
     grid-area: fecha;
     text-align: center;

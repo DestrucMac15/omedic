@@ -1,55 +1,36 @@
-.container{
-    width: 100%;
-    display: grid;
-    grid-template-rows: 50px auto 100px;
-    grid-template-columns: 100px 1fr 100px;
-    grid-template-areas:  
-    '. . .'
-    '. blog .'
-    '. . .'
-    ;
-}
-.container .container_blog{
-    grid-area: blog;
-    width: 100%;
-}
-.container .container_blog .title{
-    padding: 20px 0px;
-    display: flex;
-    justify-content: space-between;
-}
-.container .container_blog .edition_blog{
+
+.container .area .edition_blog{
     width: 100%;
 }
 /*=====FORMULARIO=======*/
-.container .container_blog .edition_blog form .form-group{
+.container .area .edition_blog form .form-group{
     display: flex;
     flex-direction: column;
     margin: 5px 0px;
 }
-.container .container_blog .edition_blog form .row-imagen{
+.container .area .edition_blog form .row-imagen{
     display: flex;
     justify-content: flex-end;
 }
-.container .container_blog .edition_blog form .row-imagen img{
+.container .area .edition_blog form .row-imagen img{
     width: 300px;
     border: 2px solid var(--rojoOmedic);
 }
-.container .container_blog .edition_blog form .form-group label{
+.container .area .edition_blog form .form-group label{
     font-weight: bold;
     margin: 5px 0px;
 }
-.container .container_blog .edition_blog form .form-group input,
-.container .container_blog .edition_blog form .form-group textarea{
+.container .area .edition_blog form .form-group input,
+.container .area .edition_blog form .form-group textarea{
     border: 1px solid var(--azulOmedic);
     outline: none;
     padding: 5px;
     font-weight: bold;
 }
-.container .container_blog .edition_blog form .form-group textarea{
+.container .area .edition_blog form .form-group textarea{
     resize: vertical;
 }
-.container .container_blog .edition_blog form .form-group button{
+.container .area .edition_blog form .form-group button{
     cursor: pointer;
     width: 150px;
     padding: 8px;
@@ -62,7 +43,7 @@
 }
 
 /*====COMENTARIOS=====*/
-.container .container_blog .container_comentarios{
+.container .area .container_comentarios{
     width: 100%;
 }
 .container_comentarios .title{

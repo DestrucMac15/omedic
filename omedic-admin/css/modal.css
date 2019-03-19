@@ -1,0 +1,39 @@
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: trnasparent;
+    display: none;
+}
+
+#test , #test02 {
+width: 300px;
+min-height: 200px;
+padding: 30px;
+display: none;
+background: #FFF;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.7);
+-moz-box-shadow: 0 0px 4px rgba(0,0,0,0.7);
+}
+
+
+.modal_close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    color: #333;
+    z-index: 2;
+  text-decoration: none;
+}
+
+.modal_close:hover {color: #dadada; transition: .3s ease-in-out;}
