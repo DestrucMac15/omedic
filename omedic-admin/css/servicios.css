@@ -36,6 +36,8 @@
 .container_servicios .servicios .lista-servicios{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .container_servicios .servicios .lista-servicios .servicio{
     width: 28%;
@@ -122,4 +124,34 @@
 }
 .container_servicios .categorias .lista-categorias ul li:hover{
     color: var(--rojoOmedic);
+}
+
+/*=======BOTON DE NUEVO SERVICIO======*/
+button.nuevo_servicio{
+    border: none;
+    background: #DF2248;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 1.5em;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 100%;
+    font-weight: lighter;
+    cursor: pointer;
+    outline: none;
+}
+button.nuevo_servicio:active{
+    background: rgba(223, 34, 72,.8);
+    transition: .3s;
+}
+
+/*=====BOTON DE ELIMINAR LA BUSQUEDA=====*/
+.buscador{
+    padding: 5px;
+    background: rgba(155,155,155,.5);
+    color: #666;
+    font-size: 1em;
+    border-radius: 15px;
+    cursor: pointer;
 }

@@ -6,17 +6,9 @@ $datos = array();
 
 $clave = $_POST['clave'];
 $valor = $_POST['valor'];
-$tipo_busqueda = $_POST['tipo_busqueda'];
-if($tipo_busqueda == 'exacta'){
-    if($clave == '' && $valor == ''){
-        $query = "SELECT * FROM servicios LEFT JOIN categorias USING(id_categoria)";
-    }else{
-        $query = "SELECT * FROM servicios LEFT JOIN categorias USING(id_categoria) WHERE $clave = '$valor'";
-    }
-}else{
-    $query = "SELECT * FROM servicios LEFT JOIN categorias USING(id_categoria) WHERE $clave LIKE '%$valor%'";
-}
 
+    $query = "SELECT * FROM servicios LEFT JOIN categorias USING(id_categoria) WHERE $clave = '$valor'";
+    
     $execute = mysqli_query($link,$query);
 if($execute){
     $respuesta['estatus'] = 'success';

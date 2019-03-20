@@ -26,6 +26,7 @@
     <title>BLOG - OMEDIC</title>
     <?php include('styles.php'); ?>
     <link href="css/detalleBlog.css" rel="stylesheet" type="text/css">
+    <link href="css/formularios.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="main_container">

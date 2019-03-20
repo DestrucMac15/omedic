@@ -80,7 +80,7 @@ $menu = 'servicios';
                             </ul>
                         </div>
                     </div>
-                    <div class="servicio servicio_link" data-servicio="https://www.doctoralia.com.mx/centro-medico/omedic-2544576">
+                    <div class="servicio servicio_link" data-servicio="https://clicdocs.com/">
                         <div class="imagen">
                             <img src="imagenes/icon_serv_04.png" alt="">
                         </div>
@@ -97,6 +97,7 @@ $menu = 'servicios';
                                     en tu zona
                                 </li>
                             </ul>
+                            <img src="imagenes/click-docs.png" style="width: 100%;" alt="Clic Docs">
                         </div>
                     </div>
                 </div>

@@ -22,26 +22,21 @@
                 <div class="container_servicios">
                     <div class="servicios">
                         <div class="title">
-                            <h3>SERVICIOS</h3>
-                            <form action="" id="form_blog">
+                            <h3>SERVICIOS</h3> <div id="mensaje_busqueda"></div>
+                            <form action="" id="form_servicios">
                                 <input type="text" id="busqueda_servicio" placeholder="Buscar servicio">
                                 <button type="submit"><i class="fas fa-search"></i></button>
                             </form>
                         </div> 
                         <div class="lista-servicios" id="lista_servicios">
-                            
                         </div>
                     </div>
                     <div class="categorias">
                         <div class="title">
                             <h3>CATEGORIAS</h3>
                         </div>
-                        <div class="lista-categorias" id="lista_categorias">
-                            <ul>
-                                <li>Motosierra</li>
-                                <li>Taladro</li>
-                                <li>Rayos X</li>
-                                <li>Otra cosa</li>
+                        <div class="lista-categorias">
+                            <ul id="lista_categorias">
                             </ul>
                         </div>
                     </div>                      
@@ -50,6 +45,9 @@
         </div>
     </div>
 
+    <a href="nuevo_servicio.php">
+        <button class="nuevo_servicio" title="Nuevo Servicio" id="btn_nuevaServicio"><i class="fas fa-plus"></i></button>
+    </a>
     <?php include('scripts.php'); ?>
     <script src="js/servicios.js"></script>
 </body>
