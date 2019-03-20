@@ -61,8 +61,8 @@ function listarCategorias(){
         if(respuesta.estatus == 'success'){
             if(respuesta.num_rows > 0){
                 let contenido = '';
-                $.each(respuesta.datos,function(){
-                
+                $.each(respuesta.datos,function(index,element){
+                    
                 });
             }
         }else{

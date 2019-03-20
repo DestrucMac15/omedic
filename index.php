@@ -19,13 +19,7 @@ $menu = 'principal';
         <?php include('menu.php'); ?>
         <header>
             <h3 class="textoInicial">Especialistas en Pacientes Geriátricos y Tomas Difíciles</h3>
-            <div id="slider">
-                <figure>
-                    <img src="imagenes/slider2.jpg" alt>
-                    <img src="imagenes/slider3.jpg" alt>
-                    <img src="imagenes/slider4.jpg" alt>
-                </figure>
-            </div>
+            <?php include('slider.php'); ?>
         </header>
         
         <main>
