@@ -7,7 +7,10 @@ $(document).ready(function(){
         let nombre_servicio = $('#busqueda_servicio').val();
         listarServicios('nombre_servicio',nombre_servicio,'relacionada');
         $('#mensaje_busqueda').html(`<span class="buscador"><i class="fas fa-times" id="eliminar_busqueda"></i> ${nombre_servicio}</span>`);
+        $(this)[0].reset();
     });
+
+    
 });
 
 function listarServicios(clave,valor,tipo_busqueda){
@@ -31,6 +34,7 @@ function listarServicios(clave,valor,tipo_busqueda){
                 $.each(respuesta.datos,function(index,element){
                     contenido += `
                     <div class="servicio" data-id_servicio="${element.id_servicio}">
+                        <i class="fas fa-pencil-alt editar_servicio"></i>
                         <div class="foto">
                             <img src="../imagenes/servicios/${element.foto_servicio}" alt="">
                         </div>
@@ -46,13 +50,35 @@ function listarServicios(clave,valor,tipo_busqueda){
                     </div>
                     `;
                 });
-            }else{
+                $('#lista_servicios').html(contenido);
 
+                //eliminar la busqueda
+                $('#eliminar_busqueda').click(function(){
+                    listarServicios('','','exacta');
+                    $('#mensaje_busqueda').html(``);
+                });
+
+                //Editar servicio
+                $('.editar_servicio').click(function(){
+                    let boton = $(this);
+                    let id_servicio = boton.closest('.servicio').data('id_servicio');
+                    location.href = `editar_servicio.php?id_servicio=${id_servicio}`;
+                });
+            }else{
+                $('#lista_servicios').html(`
+                    <h3 style="margin: 20px 0px;">NO HAY SERVICIOS AÚN</h3>
+                `);
+
+                //eliminar la busqueda
+                $('#eliminar_busqueda').click(function(){
+                    listarServicios('','','exacta');
+                    $('#mensaje_busqueda').html(``);
+                });
             }
-            $('#lista_servicios').html(contenido);
         }else{
             //console.log(respuesta.erno);
         }
+       
     });       
 }
 

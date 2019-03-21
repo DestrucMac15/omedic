@@ -55,6 +55,26 @@
     position: relative;
     cursor: pointer;
 }
+.container_servicios .servicios .lista-servicios .servicio .editar_servicio{
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    background: var(--azulOmedic);
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    transition: .3s;
+}
+.container_servicios .servicios .lista-servicios .servicio:hover .editar_servicio{
+    display: block;
+    transition: .3s;
+}
+.container_servicios .servicios .lista-servicios .servicio .editar_servicio:hover{
+    background: var(--rojoOmedic);
+    transition: .3s;
+}
 .container_servicios .servicios .lista-servicios .servicio .foto{
     width: 100%;
     grid-area: foto;
