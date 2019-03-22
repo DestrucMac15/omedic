@@ -115,7 +115,36 @@ $menu = 'principal';
                     </div>
                 </div>
             </section>
-            
+            <section class="container_comentarios">
+                <h2 class="subtitle">TESTIMONIOS</h2>
+                <div class="comentarios">
+                    <div class="comentario">
+                        <i class="fas fa-user-circle"></i>
+                        <p class="nombre">Ofelia Márquez</p>
+                        <p class="tipo">Paciente</p>
+                        <p class="texto">
+                            "Me ha parecido un buen servicio y trato amable"
+                        </p>
+                    </div>
+                    <div class="comentario">
+                        <i class="fas fa-user-circle"></i>
+                        <p class="nombre">Antonio Helue Mena</p>
+                        <p class="tipo">Doctor</p>
+                        <p class="texto">
+                            "En dos ocasiones solicitamos su servicio, quedando conformes"
+                        </p>
+                    </div>
+                    <div class="comentario">
+                        <i class="fas fa-user-circle"></i>
+                        <p class="nombre">Carlos Miranda</p>
+                        <p class="tipo">Paciente</p>
+                        <p class="texto">
+                            "La principal fortaleza de Omedic es su trato profesional y 
+                            disposición para ajustarse a las necesidades del cliente."
+                        </p>
+                    </div>
+                </div>
+            </section>
            <!--=========FORMULARIO DE CONTACTO=======-->
            <?php include('forms/formulario.php'); ?> 
 

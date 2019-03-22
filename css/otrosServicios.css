@@ -87,6 +87,7 @@ main .container .content .container_servicios .servicios{
     color: #aaa; 
 }
 
+/*=======SERVICIOS========*/
 main .container .content .container_servicios .servicios .lista_servicios{
     width: 100%;
     margin: 20px 0px;
@@ -96,9 +97,20 @@ main .container .content .container_servicios .servicios .lista_servicios{
 }
 main .container .content .container_servicios .servicios .lista_servicios .servicio{
     width: 250px;
-    height: 300px;
-    background: #fff;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
     margin: 10px;
+}
+main .container .content .container_servicios .servicios .lista_servicios .servicio:hover{
+    box-shadow: 1px 1px 15px #aaa;
+    transition: .3s;
+}
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: #fff;
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr;
@@ -108,18 +120,22 @@ main .container .content .container_servicios .servicios .lista_servicios .servi
     'texto'
     ;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .imagen{
+main .container .content .container_servicios .servicios .lista_servicios .servicio .arriba{
+    top: -350px;
+    transition: .5s;
+}
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .imagen{
     width: 100%;
     height: 100%;
     grid-area: imagen;
     display: flex;
     justify-content: center; 
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .imagen img{
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .imagen img{
     width: 150px;
     height: 100%;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .texto{
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto{
     width: 100%;
     height: 100%;
     grid-area: texto;
@@ -128,23 +144,63 @@ main .container .content .container_servicios .servicios .lista_servicios .servi
     justify-content: space-between;
     align-items: center;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .texto ul{
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto ul{
     display: flex;
     flex-direction: column;
     padding: 0px;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .texto ul li{
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto ul li{
     list-style: none;
     text-align: center;
     margin: 8px 0px;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .texto button{
-    padding: 5px;
+main .container .content .container_servicios .servicios .lista_servicios .servicio .texto .contenido ul .nombre{
+    color: var(--azulOmedic);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto .mas{
+    font-size: .9em;
+    font-weight: bold;
+    cursor: pointer;
+}
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto .mas:hover{
+    color: var(--grisOmedic);
+}
+main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto button{
+    padding: 7px 10px;
     border: none;
     color: #fff;
-    background: var(--rojoOmedic);
+    background: var(--azulOmedic);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1em;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio:hover{
-    box-shadow: 1px 1px 15px #aaa;
+main .container .content .container_servicios .servicios .lista_servicios .servicio .descripcion{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    height: 350px;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+main .container .content .container_servicios .servicios .lista_servicios .servicio .descripcion .cerrar .cerrar_descripcion{
+    font-size: 2em;
+    cursor: pointer;
+}
+main .container .content .container_servicios .servicios .lista_servicios .servicio .descripcion .cerrar .cerrar_descripcion:hover{
+    color: var(--rojoOmedic);
     transition: .3s;
+}
+/*=====BOTON DE ELIMINAR LA BUSQUEDA=====*/
+main .container_servicios .servicios .buscador{
+    padding: 5px;
+    background: rgba(155,155,155,.5);
+    color: #666;
+    font-size: 1em;
+    border-radius: 15px;
+    cursor: pointer;
 }

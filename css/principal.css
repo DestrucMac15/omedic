@@ -155,6 +155,57 @@ header .textoInicial{
     border-radius: 6px;
 }
 
+/*=====COMENTARIOS=====*/
+.container main .container_comentarios{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-rows: 2em 100px 1fr 2em;
+    grid-template-areas: 
+    '. . .'
+    '. titulo .'
+    '. comentarios .'
+    '. . .';
+}
+.container main .container_comentarios .subtitle{
+    width: 100%;
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container main .container_comentarios .comentarios{
+    grid-area: comentarios;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container main .container_comentarios .comentarios .comentario{
+    width: 350px;
+    height: 200px;
+    border: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+.container main .container_comentarios .comentarios .comentario i{
+    font-size: 3.5em;
+    color: var(--azulOmedic)
+}
+.container main .container_comentarios .comentarios .comentario .nombre{
+    font-weight: bold;
+}
+.container main .container_comentarios .comentarios .comentario .tipo{
+    color: var(--grisOmedic);
+    font-size: .8em;
+}
+.container main .container_comentarios .comentarios .comentario .texto{
+    text-align: center;
+    font-style: italic;
+}
 /*=======SUCRIPCION A NOTICIAS=======*/
 .container main .container_suscripcion{
     padding: 40px 0px;

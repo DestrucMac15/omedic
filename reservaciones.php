@@ -1,5 +1,6 @@
 <?php 
 $menu = 'reservaciones';
+
 ?>
 <!DOCTYPE html>
 <html lang="es_mx">
@@ -26,50 +27,19 @@ $menu = 'reservaciones';
                             <div class="subtitle">
                                 <h3>CATEGORIAS</h3>
                             </div>
-                            <ul class="lista-categorias">
-                                <li>PRUEBAS</li>
-                                <li>LABORATORIO</li>
+                            <ul class="lista-categorias" id="lista_categorias">
                             </ul>
                         </div>
                         <div class="servicios">
                             <div class="subtitle">
-                                <div class="mensaje"></div>
+                                <div class="mensaje" id="mensaje_busqueda"></div>
                                 <form action="" id="form_servicios">
                                     <input type="text" id="busqueda_servicio" placeholder="Buscar servicio">
                                     <button type="submit"><i class="fas fa-search"></i></button>
                                 </form>
                             </div>
-                            <div class="lista_servicios">
-                                <div class="servicio">
-                                    <div class="imagen">
-                                        <img src="imagenes/servicios/1.png" alt="">
-                                    </div>
-                                    <div class="texto">
-                                        <ul>
-                                            <li class="nombre">
-                                                Taladro
-                                            </li>
-                                            <li class="nombre">
-                                                Duracion: 60 min.
-                                            </li>
-                                            <li class="nombre">
-                                                $350.°°
-                                            </li>
-                                        </ul>
-                                        <button>
-                                            Reservar
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="servicio">
-                                    
-                                </div>
-                                <div class="servicio">
-                                    
-                                </div>
-                                <div class="servicio">
-                                    
-                                </div>
+                            <div class="lista_servicios" id="listar_servicios">
+                                <h3 class="subtitle">CARGANDO...</h3>
                             </div>
                         </div>
                     </div>
@@ -82,5 +52,6 @@ $menu = 'reservaciones';
     </div>
    
     <?php include('scripts.php'); ?>
+    <script src="js/reservaciones.js"></script>
 </body>
 </html>

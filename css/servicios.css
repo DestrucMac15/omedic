@@ -21,6 +21,7 @@ main .container_servicios .servicios{
     grid-area: servicios;
     flex-wrap: wrap;
 }
+
 main .container_servicios .servicios .servicio{
     width: 250px;
     margin: 10px;
@@ -220,3 +221,4 @@ main .container_descripcion .servicios > .servicio .texto ul{
         margin: 20px 0px;
     }
 }
+
