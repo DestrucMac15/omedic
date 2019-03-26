@@ -43,7 +43,7 @@
         <p>Cobertura en CDMX y Área metropolitana</p>
     </div>
     <div class="telefono">
-        <div class="texto">Oficinas 24hrs <br> (55) 4170 8797</div>
+        <div class="texto">Oficinas 24hrs <br> (55) 8435 09546</div>
         <div class="icono"><i class="fas fa-phone"></i></div>
     </div>
     <div class="bar">

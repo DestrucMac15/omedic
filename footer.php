@@ -9,8 +9,8 @@
     <div class="telefono">
         <i class="fas fa-phone"></i>
             Atención 24 horas
-            CDMX Y Área Metropolitana
-            (55) 41708797
+            CDMX Y Área Metropolitana<br>
+            (55) 8435 09546
     </div>
     <div class="informacion">
             <i class="fas fa-info-circle"></i>

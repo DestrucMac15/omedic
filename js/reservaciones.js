@@ -3,7 +3,13 @@ $(document).ready(function(){
     listarServicios('','','exacta');
     listarCategorias();
 
-    
+    $('#form_servicios').submit(function(event){
+        event.preventDefault();
+        let nombre_servicio = $('#busqueda_servicio').val();
+        listarServicios('nombre_servicio',nombre_servicio,'relacionada');
+        $('#mensaje_busqueda').html(`<span class="buscador"><i class="fas fa-times" id="eliminar_busqueda"></i> ${nombre_servicio}</span>`);
+        $(this)[0].reset();
+    });
 });
 
 function listarServicios(clave,valor,tipo_busqueda){
@@ -23,7 +29,7 @@ function listarServicios(clave,valor,tipo_busqueda){
                 let contenido = '';
                 $.each(respuesta.datos,function(index,element){
                     contenido += `
-                    <div class="servicio" ${element.id_servicio}>
+                    <div class="servicio" data-id_servicio="${element.id_servicio}">
                         <div class="contenido">
                             <div class="imagen">
                                 <img src="imagenes/servicios/${element.foto_servicio}" alt="">
@@ -40,8 +46,8 @@ function listarServicios(clave,valor,tipo_busqueda){
                                         $${element.precio_servicio}.°°
                                     </li>
                                 </ul>
-                                <button>
-                                    Reservar
+                                <button class="reservar">
+                                    Reservar 
                                 </button>
                                 <span class="mas">Ver más</span>
                             </div>
@@ -58,7 +64,8 @@ function listarServicios(clave,valor,tipo_busqueda){
                     `;
                 });
                 $('#listar_servicios').html(contenido);
-
+                
+                //ver la descripcion
                 $('.mas').click(function(){
                     let boton = $(this);
                     let contenido = boton.closest('.contenido');
@@ -73,10 +80,39 @@ function listarServicios(clave,valor,tipo_busqueda){
                     contenido.toggleClass('arriba');
                     descripcion.toggleClass('arriba');
                 });
+
+                //eliminar busqueda
+                $('#eliminar_busqueda').click(function(){
+                    listarServicios('','','exacta');
+                    $('#mensaje_busqueda').html(``);
+                });
+
+                //Agregar al carrito
+                $('.reservar').click(function(){
+                    let boton = $(this);
+                    let servicio = boton.closest('.servicio');
+                    let id_servicio = servicio.data('id_servicio');
+                    $.ajax({
+                        url: 'control/carrito.php',
+                        method: 'POST',
+                        dataType: 'JSON',
+                        data: {
+                            id_servicio: id_servicio
+                        }
+                    }).done(function(respuesta){
+                        console.log(respuesta);
+                    });
+
+                });
             }else{
                 $('#listar_servicios').html(`
                     <h3 class="sibtitle">NO HAY SERVICIOS</h3>
                 `);
+                //eliminar busqueda
+                $('#eliminar_busqueda').click(function(){
+                    listarServicios('','','exacta');
+                    $('#mensaje_busqueda').html(``);
+                });
             }
         }else{
             console.log(respuesta.erno);
@@ -105,10 +141,6 @@ function listarCategorias(){
                     let nombre_categoria = $(this).data('nombre_categoria');
                     $('#mensaje_busqueda').html(`<span class="buscador"><i class="fas fa-times" id="eliminar_busqueda"></i> ${nombre_categoria}</span>`);
                     listarServicios('id_categoria', id_categoria,'exacta');
-                });
-
-                $('#eliminar_busqueda').click(function(){
-                    alert('');
                 });
             }
         }else{

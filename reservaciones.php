@@ -1,5 +1,6 @@
 <?php 
 $menu = 'reservaciones';
+SESSION_START();
 
 ?>
 <!DOCTYPE html>
@@ -43,6 +44,11 @@ $menu = 'reservaciones';
                             </div>
                         </div>
                     </div>
+                </div>
+                <i id="carrito" class="fas fa-shopping-cart"><span id="num_carrito">1</span></i>
+
+                <div class="container-cart">
+                    
                 </div>
             </section>
         </main>

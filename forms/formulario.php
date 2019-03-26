@@ -48,7 +48,7 @@
             </div>
             <p>
                 OMEDIC <br> 
-                Tel. (55) 41708797 <br>
+                Tel. (55) 8435 09546 <br>
                 contacto@omedic.com.mx <br>
             </p>
         </div>
