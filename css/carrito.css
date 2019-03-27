@@ -1,0 +1,103 @@
+/*=======CARRITO======*/
+main .container #abrir_carrito{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: var(--azulOmedic);
+    padding: 12px 11px;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+main .container #abrir_carrito #num_carrito{
+    position: fixed;
+    bottom: 80px;
+    right: 36px;
+    background: var(--rojoOmedic);
+    color: #fff;
+    border-radius: 100%;
+    padding: 4px 9px;
+    font-size: .8em;
+}
+
+
+/*========CONTAINER CART=====*/
+.container-cart{
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background: #fff;
+    z-index: 9999;
+    padding: 5px;
+}
+.oculto{
+    display: none;
+}
+.container-cart > button{
+    margin: 10px 0px;
+    width: 100%;
+    padding: 8px 0px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+ .container-cart h2{
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    font-weight: bold;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+.container-cart .list-cart{
+    width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.container-cart .list-total{
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding: 10px;
+}
+.container-cart .sub-total{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.container-cart .total{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.container-cart .list-cart .servicio{
+    width: 100%;
+    padding: 5px;
+}
+.container-cart .list-cart .servicio .nombre_servicio{
+    font-weight: bold;
+}
+.container-cart .list-cart .servicio .precio{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #aaa;
+}
+.container-cart .list-cart .servicio .precio button{
+    background: none;
+    border: 1px solid #000;
+    padding: 2px 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.container-cart .list-cart .servicio .precio button:hover{
+    background: #000;
+    color: #fff;
+    transition: .3s;
+}

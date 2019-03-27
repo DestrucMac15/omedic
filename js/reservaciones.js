@@ -10,6 +10,9 @@ $(document).ready(function(){
         $('#mensaje_busqueda').html(`<span class="buscador"><i class="fas fa-times" id="eliminar_busqueda"></i> ${nombre_servicio}</span>`);
         $(this)[0].reset();
     });
+
+    
+
 });
 
 function listarServicios(clave,valor,tipo_busqueda){
@@ -87,23 +90,13 @@ function listarServicios(clave,valor,tipo_busqueda){
                     $('#mensaje_busqueda').html(``);
                 });
 
-                //Agregar al carrito
+                //detalles de reserva
                 $('.reservar').click(function(){
                     let boton = $(this);
-                    let servicio = boton.closest('.servicio');
-                    let id_servicio = servicio.data('id_servicio');
-                    $.ajax({
-                        url: 'control/carrito.php',
-                        method: 'POST',
-                        dataType: 'JSON',
-                        data: {
-                            id_servicio: id_servicio
-                        }
-                    }).done(function(respuesta){
-                        console.log(respuesta);
-                    });
-
+                    let id_servicio = boton.closest('.servicio').data('id_servicio');
+                    location.href = `detalles_reserva.php?id_servicio=${id_servicio}`;
                 });
+                
             }else{
                 $('#listar_servicios').html(`
                     <h3 class="sibtitle">NO HAY SERVICIOS</h3>

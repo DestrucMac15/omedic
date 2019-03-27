@@ -1,15 +1,24 @@
 <?php 
 include('conexi.php');
 $link = Conectarse();
-
 SESSION_START();
 
-$id_servicio = $_POST['id_servicio'];
-$respuesta = detallesServicio($id_servicio,$link);
+$method = $_POST['method'];
 
-$_SESSION['servicios'][] = $respuesta;
+switch($method){
+    case 'add':
+        $id_servicio = $_POST['id_servicio'];
+        $respuesta = agregarServicio($id_servicio,$link);
+        $_SESSION['servicios'][] = $respuesta;
+    break;
+    default: 
+    echo 'No existe';
+}
 
-function detallesServicio($id_servicio,$link){
+
+
+
+function agregarServicio($id_servicio,$link){
     $respuesta = array();
     $query = "SELECT id_servicio,nombre_servicio,precio_servicio FROM servicios WHERE id_servicio='$id_servicio'";
     $execute = mysqli_query($link,$query);
@@ -24,5 +33,7 @@ function detallesServicio($id_servicio,$link){
         return $respuesta;
     }
 }
+
+//Retornar en formato json los servicios en el carrito
 echo json_encode($_SESSION['servicios']);
 ?>

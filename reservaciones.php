@@ -1,7 +1,6 @@
 <?php 
 $menu = 'reservaciones';
 SESSION_START();
-
 ?>
 <!DOCTYPE html>
 <html lang="es_mx">
@@ -12,6 +11,7 @@ SESSION_START();
     <title>OMEDIC | Ciudad de México | Ultrasonidos a Domicilio</title>
     <?php include('styles.php'); ?>
     <link rel="stylesheet" href="css/otrosServicios.css" type="text/css">
+    <link rel="stylesheet" href="css/carrito.css" type="text/css">
     
 </head>
 <body>
@@ -45,19 +45,19 @@ SESSION_START();
                         </div>
                     </div>
                 </div>
-                <i id="carrito" class="fas fa-shopping-cart"><span id="num_carrito">1</span></i>
+                <i id="abrir_carrito" class="fas fa-shopping-cart"></i>
 
-                <div class="container-cart">
-                    
-                </div>
+                <?php include('carrito.php'); ?>
             </section>
         </main>
 
         <?php include('footer.php'); ?>
 
+
     </div>
    
     <?php include('scripts.php'); ?>
     <script src="js/reservaciones.js"></script>
+    <script src="js/carrito.js"></script>
 </body>
 </html>
