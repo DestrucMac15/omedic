@@ -9,4 +9,6 @@ $(document).ready(function(){
         console.log(carrito);
         carrito.toggleClass('oculto');
     });
+
+    
 });

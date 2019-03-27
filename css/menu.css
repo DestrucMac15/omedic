@@ -21,7 +21,7 @@
 }
 
 .container nav{
-    z-index: 999;
+    z-index: 99;
     background: rgba(255,255,255,.7);
     position: fixed;
     top: 0px;
