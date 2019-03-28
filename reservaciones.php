@@ -45,7 +45,7 @@ SESSION_START();
                         </div>
                     </div>
                 </div>
-                <i id="abrir_carrito" class="fas fa-shopping-cart"></i>
+                <i id="abrir_carrito" class="fas fa-shopping-cart"><span id="num_carrito">1</span></i>
 
                 <?php include('carrito.php'); ?>
             </section>

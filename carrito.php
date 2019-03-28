@@ -1,7 +1,7 @@
 <div class="container-cart oculto" id="container_carrito">
     <button style="background: var(--verdeOmedic);">CHECKOUT</button>
     <h2>CARRITO DE COMPRAS</h2>
-    <div class="list-cart">
+    <div class="list-cart" id="list_cart">
         <h3 style="text-align:center;">No hay Articulos</h3>
     </div>
     <div class="list-total">
