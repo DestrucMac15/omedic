@@ -1,9 +1,9 @@
-main .container{
+main .container_otros{
     width: 100%;
     margin-top: 150px;
     background: #eee;
     display: grid;
-    grid-template-columns: 100px 1fr 100px;
+    grid-template-columns: 200px 1fr 200px;
     grid-template-rows: 50px 1fr 50px;
     grid-template-areas: 
     '. . .'
@@ -11,203 +11,68 @@ main .container{
     '. . .'
     ;
 }
-main .container .content{
+main .container_otros .content{
     width: 100%;
+    height: 100%;
     grid-area: content;
 }
-main .container .content .title{
+main .container_otros .content .title{
     padding: 20px 0px;
     text-align: center;
     font-size: 2.3em;
     font-weight: bold;
 }
-main .container .content .container_servicios{
-    margin: 20px 0px;
+main .container_otros .content .servicios{
     width: 100%;
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr; 
-    grid-template-areas: 
-    'categorias servicios'
-    ;
-}
-main .container .content .container_servicios .subtitle{
     display: flex;
-    justify-content: space-between;
-}
-/*=======CATEGORIAS======*/
-main .container .content .container_servicios .categorias{
-    width: 100%;
-    height: 100%;
-    grid-area: categorias;
-    border-right: 1px solid var(--grisOmedic);
-    padding: 0px 10px;
-}
-main .container .content .container_servicios .categorias .lista-categorias{
-    margin: 20px 0px;
-    font-weight: bold;
-}
-main .container .content .container_servicios .categorias .lista-categorias li{
-    color: var(--azulOmedic);
-    margin: 5px 0px; 
-    cursor: pointer;
-}
-main .container .content .container_servicios .categorias .lista-categorias li:hover{
-    color: var(--rojoOmedic);
-    transition: .3s;
-}
-/*=======SERVICIOS========*/
-main .container .content .container_servicios .servicios{
-    width: 100%;
-    height: 100%;
-    grid-area: servicios;
-    padding: 0px 20px;
-}
-
-.container .content .subtitle form{
-    position: relative;
-}
-.container .content .subtitle form input{
-    border: none;
-    background: #fff;
-    padding: 5px;
-    width: 200px;
-}
-.container .content .subtitle form button{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    border: none;
-    height: 100%;
-    font-size: 1.2em;
-    padding: 0px 5px;
-    cursor: pointer;
-    background: none;
-    color: #aaa; 
-}
-
-/*=======SERVICIOS========*/
-main .container .content .container_servicios .servicios .lista_servicios{
-    width: 100%;
-    margin: 20px 0px;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio{
-    width: 250px;
-    height: 350px;
+main .container_otros .content .servicios .servicio{
+    width: 450px;
+    height: 550px;
     position: relative;
-    overflow: hidden;
-    margin: 10px;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio:hover{
-    box-shadow: 1px 1px 15px #aaa;
-    transition: .3s;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido{
-    position: relative;
-    width: 100%;
-    height: 350px;
-    background: #fff;
-    padding: 10px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 1fr;
-    grid-template-areas: 
-    'imagen'
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    '.'
     'texto'
     ;
+    padding: 10px 50px;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .arriba{
-    top: -350px;
-    transition: .5s;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .imagen{
+main .container_otros .content .servicios .servicio img{
+    position: absolute;
     width: 100%;
     height: 100%;
-    grid-area: imagen;
-    display: flex;
-    justify-content: center; 
+    z-index: 0;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .imagen img{
-    width: 150px;
-    height: 100%;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto{
+main .container_otros .content .servicios .servicio .texto{
     width: 100%;
     height: 100%;
     grid-area: texto;
+    z-index: 1;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto ul{
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto ul li{
-    list-style: none;
+main .container_otros .content .servicios .servicio .texto p{
     text-align: center;
-    margin: 8px 0px;
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .texto .contenido ul .nombre{
-    color: var(--azulOmedic);
-    font-weight: bold;
-    font-size: 1.1em;
+@media screen and (max-width: 900px){
+    main .container_otros{
+        grid-template-columns: 1em 1fr 1em;
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas: 
+        '. . .'
+        '. content .'
+        '. . .'
+        ;
+    }
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto .mas{
-    font-size: .9em;
-    font-weight: bold;
-    cursor: pointer;
+@media screen and (max-width: 500px){
+    main .container_otros .content .servicios .servicio{
+        width: 100%;
+    }
 }
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto .mas:hover{
-    color: var(--grisOmedic);
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto button{
-    outline: none;
-    padding: 7px 10px;
-    border: none;
-    color: #fff;
-    background: var(--azulOmedic);
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1em;
-    cursor: pointer;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .contenido .texto button:hover{
-    background: var(--rojoOmedic);
-    transition: .3s;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .descripcion{
-    position: relative;
-    padding: 10px;
-    width: 100%;
-    height: 350px;
-    background: rgba(255,255,255,.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .descripcion .cerrar .cerrar_descripcion{
-    font-size: 2em;
-    cursor: pointer;
-}
-main .container .content .container_servicios .servicios .lista_servicios .servicio .descripcion .cerrar .cerrar_descripcion:hover{
-    color: var(--rojoOmedic);
-    transition: .3s;
-}
-/*=====BOTON DE ELIMINAR LA BUSQUEDA=====*/
-main .container_servicios .servicios .buscador{
-    padding: 5px;
-    background: rgba(155,155,155,.5);
-    color: #666;
-    font-size: 1em;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-

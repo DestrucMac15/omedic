@@ -82,6 +82,11 @@ main .container #abrir_carrito #num_carrito{
 .container-cart .list-cart .servicio .nombre_servicio{
     font-weight: bold;
 }
+.container-cart .list-cart .servicio .nombre_servicio .fecha{
+    font-weight: lighter;
+    color: var(--grisClaro);
+    font-size: .8em;
+}
 .container-cart .list-cart .servicio .precio{
     margin-top: 5px;
     display: flex;

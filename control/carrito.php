@@ -3,16 +3,21 @@ include('conexi.php');
 $link = Conectarse();
 SESSION_START();
 
-$method = $_POST['method'];
+$accion = $_POST['accion'];
 
-switch($method){
-    case 'add':
+switch($accion){
+    case 'add': //agregar servicio al carrito
         $id_servicio = $_POST['id_servicio'];
-        $respuesta = agregarServicio($id_servicio,$link);
+        $fecha = $_POST['fecha'];
+        $respuesta = agregarServicio($id_servicio,$link,$fecha);
         $_SESSION['servicios'][] = $respuesta;
     break;
-    case 'list':
-
+    case 'list': //listar los servicio al carrito
+        
+    break;
+    case 'delete': //eliminar un servicio
+        $id_servicio = $_POST['id_servicio'];
+        unset($_SESSION['servicios'][$id_servicio]);
     break;
     default: 
     echo 'No existe';
@@ -21,13 +26,14 @@ switch($method){
 
 
 
-function agregarServicio($id_servicio,$link){
+function agregarServicio($id_servicio,$link,$fecha){
     $respuesta = array();
     $query = "SELECT id_servicio,nombre_servicio,precio_servicio FROM servicios WHERE id_servicio='$id_servicio'";
     $execute = mysqli_query($link,$query);
     if($execute){
         $_SESSION['estatus'] = 'success';
         $row = mysqli_fetch_assoc($execute);
+        $row['fecha_reserva'] = $fecha;
         $respuesta['datos'] = $row;
 
         return $respuesta;
@@ -36,6 +42,11 @@ function agregarServicio($id_servicio,$link){
         $_SESSION['erno'] = 'Error en '.$query.mysqli_error($link);
         return $respuesta;
     }
+}
+
+function eliminarServicio($id_servicio){
+    unset($_SESSION['servicios'][$id_servicio]);
+    $_SESSION['estatus'] = 'success';
 }
 
 //Retornar en formato json los servicios en el carrito

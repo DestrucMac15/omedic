@@ -11,7 +11,6 @@ if($_POST['fecha'] == ""){
 }else{
     $fecha = $_POST['fecha'];
     $query = "SELECT DISTINCT fecha_desreservacion FROM desc_reservaciones LEFT JOIN servicios USING(id_servicio) WHERE id_categoria='$id_categoria' AND fecha_desreservacion='$fecha'";
-    
 }
 
 

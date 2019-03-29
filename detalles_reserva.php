@@ -3,7 +3,6 @@ include('control/conexi.php');
 $link = Conectarse();
 $menu = 'reservaciones';
 SESSION_START();
-echo var_dump($_SESSION['servicios']);
 if(isset($_GET['id_servicio'])){
     $id_servicio = $_GET['id_servicio'];
     $query = "SELECT * FROM servicios LEFT JOIN categorias USING (id_categoria) WHERE id_servicio='$id_servicio'";
@@ -58,7 +57,7 @@ if(isset($_GET['id_servicio'])){
                     
                 </div>
 
-                <i id="abrir_carrito" class="fas fa-shopping-cart"><span id="num_carrito">1</span></i>
+                <i id="abrir_carrito" class="fas fa-shopping-cart"></i>
 
                 <?php include('carrito.php'); ?>
             </section>

@@ -10,7 +10,7 @@ SESSION_START();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OMEDIC | Ciudad de México | Ultrasonidos a Domicilio</title>
     <?php include('styles.php'); ?>
-    <link rel="stylesheet" href="css/otrosServicios.css" type="text/css">
+    <link rel="stylesheet" href="css/reservaciones.css" type="text/css">
     <link rel="stylesheet" href="css/carrito.css" type="text/css">
     
 </head>
@@ -45,7 +45,7 @@ SESSION_START();
                         </div>
                     </div>
                 </div>
-                <i id="abrir_carrito" class="fas fa-shopping-cart"><span id="num_carrito">1</span></i>
+                <i id="abrir_carrito" class="fas fa-shopping-cart"></i>
 
                 <?php include('carrito.php'); ?>
             </section>

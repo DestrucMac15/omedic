@@ -6,9 +6,11 @@ $(document).ready(function(){
     $('#form_servicios').submit(function(event){
         event.preventDefault();
         let nombre_servicio = $('#busqueda_servicio').val();
-        listarServicios('nombre_servicio',nombre_servicio,'relacionada');
-        $('#mensaje_busqueda').html(`<span class="buscador"><i class="fas fa-times" id="eliminar_busqueda"></i> ${nombre_servicio}</span>`);
-        $(this)[0].reset();
+        if(nombre_servicio != ''){
+            listarServicios('nombre_servicio',nombre_servicio,'relacionada');
+            $('#mensaje_busqueda').html(`<span class="buscador"><i class="fas fa-times" id="eliminar_busqueda"></i> ${nombre_servicio}</span>`);
+            $(this)[0].reset();
+        }
     });
 
     

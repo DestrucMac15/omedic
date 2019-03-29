@@ -41,22 +41,11 @@ $(document).ready(function(){
                                 cancelButtonColor: '#d33',
                                 confirmButtonText: 'Agregar'
                               },function(){
+                                swal('Correcto','Se a agregado con exito a tu carrito','success');
                                 let id_servicio = $('#id_servicio').data('id_servicio');
-                                $.ajax({
-                                    url: 'control/carrito.php',
-                                    method: 'POST',
-                                    dataType: 'JSON',
-                                    data: {
-                                        id_servicio: id_servicio,
-                                        method: 'add'
-                                    }
-                                }).done(function(respuesta){
-                                    
-                                    swal('Correcto','Se ha agregado correctamente','success');
-                                    let contenido = actualizarCarrito(respuesta);
-                                    $('#list_cart').html(contenido);
-                                });
-                              });
+                                let respuesta = carrito(id_servicio,'add',fecha);
+                                actualizarCarrito(respuesta);
+                            });    
                         }
                     });
                   }
@@ -70,6 +59,7 @@ $(document).ready(function(){
           
             });
             if(disponibilidad.num_rows > 0){
+                
                 $.each(disponibilidad.datos,function(index,element){
                     let evento = {};
                     evento = {
