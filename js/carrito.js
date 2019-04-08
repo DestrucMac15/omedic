@@ -1,4 +1,7 @@
+
 $(document).ready(function(){
+        
+
     /*=========ABRIR Y CERRAR CARRITO========*/
     $('#cerrar_carrito').click(function(){
         let carrito = $('#container_carrito');
@@ -11,18 +14,50 @@ $(document).ready(function(){
     $('#seguir_carrito').click(function(){
         location.href = 'reservaciones.php';
     });
-    carrito('','list');
+    carrito('','list','');
 
+
+    /*=====FINALIZAR COMPRA=====*/
+    $('#finalizar_carrito').click(function(){
+        swal({
+            title: 'Atencion',
+            text: "¿Deseas finalizar tu compra?",
+            type: 'warning',
+            showCancelButton: true,
+            cancelButtonText: 'Cancelar',
+            confirmButtonColor: '#165E79',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ir a PayPal'
+          },function(){
+            $.ajax({
+                url: 'control/carrito.php',
+                method: 'POST',
+                dataType: 'JSON',
+                data: {
+                    accion: 'list'
+                }
+            }).done(function(respuesta){
+                if(respuesta == 'error'){
+                    alert('Por favor ingresar un servicio');
+                }else{
+                    location.href = 'venta_detalle.php';
+                }
+            });
+            
+        });    
+    });
 });
 
 //========ACTUALIZAR CARRITO DE COMPRAS=======
 function actualizarCarrito(servicios){
     let contenido = '';
-    if(servicios == ''){
+    if(servicios == 'error'){
         contenido = `
             <h3 style="text-align:center;">No hay Articulos</h3>
         `;
+        $('#abrir_carrito').html(``);
         $('#carrito_total').text(`$0.00`);
+        $('#costo_total').val(0);
     }else{
         let num_rows = servicios.length;
         let precio = 0;
@@ -44,6 +79,7 @@ function actualizarCarrito(servicios){
             $('#abrir_carrito').html(`<span id="num_carrito">${num_rows}</span>`);
         });
         $('#carrito_total').text(`$${precio}.00`);
+        $('#costo_total').val(precio);
     }
     return contenido;
 }
@@ -96,3 +132,4 @@ function obtenerFecha(fecha){
     
         return dia+' de '+meses[mes]+' del '+ano;
 }
+

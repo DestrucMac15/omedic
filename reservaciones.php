@@ -1,6 +1,7 @@
 <?php 
 $menu = 'reservaciones';
 SESSION_START();
+
 ?>
 <!DOCTYPE html>
 <html lang="es_mx">
@@ -59,5 +60,6 @@ SESSION_START();
     <?php include('scripts.php'); ?>
     <script src="js/reservaciones.js"></script>
     <script src="js/carrito.js"></script>
+    
 </body>
 </html>

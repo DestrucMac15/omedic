@@ -4,6 +4,7 @@ $link = Conectarse();
 SESSION_START();
 
 $accion = $_POST['accion'];
+$_SESSION['estatus'] = '';
 
 switch($accion){
     case 'add': //agregar servicio al carrito
@@ -11,16 +12,29 @@ switch($accion){
         $fecha = $_POST['fecha'];
         $respuesta = agregarServicio($id_servicio,$link,$fecha);
         $_SESSION['servicios'][] = $respuesta;
+
+        echo json_encode($_SESSION['servicios']);
     break;
-    case 'list': //listar los servicio al carrito
-        
+    case 'list': 
+        $num_rows = sizeof($_SESSION['servicios']);
+        if($num_rows == 0){
+            $_SESSION['estatus'] = 'error';
+            echo json_encode($_SESSION['estatus']);
+        }else{
+            echo json_encode($_SESSION['servicios']);
+        }
     break;
     case 'delete': //eliminar un servicio
         $id_servicio = $_POST['id_servicio'];
-        unset($_SESSION['servicios'][$id_servicio]);
+        eliminarServicio($id_servicio);
+        $num_rows = sizeof($_SESSION['servicios']);
+        if($num_rows == 0){
+            $_SESSION['estatus'] = 'error';
+            echo json_encode($_SESSION['estatus']);
+        }else{
+            echo json_encode($_SESSION['servicios']);
+        }
     break;
-    default: 
-    echo 'No existe';
 }
 
 
@@ -28,7 +42,7 @@ switch($accion){
 
 function agregarServicio($id_servicio,$link,$fecha){
     $respuesta = array();
-    $query = "SELECT id_servicio,nombre_servicio,precio_servicio FROM servicios WHERE id_servicio='$id_servicio'";
+    $query = "SELECT id_servicio,nombre_servicio,precio_servicio,descripcion_servicio FROM servicios WHERE id_servicio='$id_servicio'";
     $execute = mysqli_query($link,$query);
     if($execute){
         $_SESSION['estatus'] = 'success';
@@ -48,7 +62,4 @@ function eliminarServicio($id_servicio){
     unset($_SESSION['servicios'][$id_servicio]);
     $_SESSION['estatus'] = 'success';
 }
-
-//Retornar en formato json los servicios en el carrito
-echo json_encode($_SESSION['servicios']);
 ?>

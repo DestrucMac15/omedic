@@ -16,6 +16,7 @@ if(isset($_GET['id_servicio'])){
     header('Location:reservaciones.php');
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="es_mx">
