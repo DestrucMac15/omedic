@@ -1,7 +1,7 @@
 <div class="container-cart oculto" id="container_carrito">
     <button style="background: var(--verdeOmedic);" id="cerrar_carrito">CERRAR</button>
     <h2>CARRITO DE COMPRAS</h2>
-    <input type="text" id="costo_total">
+    <input type="text" style="display:none;" id="costo_total">
     <div class="list-cart" id="list_cart">
         <h3 style="text-align:center;">No hay Articulos</h3>
     </div>
