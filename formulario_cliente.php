@@ -1,10 +1,6 @@
 <?php 
 $menu = 'reservaciones';
 SESSION_START();
-echo var_dump($_SESSION['servicios']);
-foreach($_SESSION['servicios'] as $clave => $valor){
-    echo var_dump($valor);
-}
 if($_SESSION['verificacion'] == 'success'){
 
 }else{

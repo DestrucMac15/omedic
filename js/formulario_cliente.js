@@ -16,12 +16,12 @@ $(document).ready(function(){
             data: datosForm
         }).done(function(respuesta){
             if(respuesta.estatus == 'success'){
-                swal('Correcto','Gracias por contratar nuestros servicios, a continuación uno de nuestros agentes de OMEDIC se pondrán en contacto contigo para confirmar la reservación','success');
+                swal('Correcto','Gracias por contratar nuestros servicios, a continuación uno de nuestros agentes de OMEDIC se pondrá en contacto contigo para confirmar la reservación','success');
                 setTimeout(function(){
-                    location.href = 'index.php';
+                    location.href = 'destruir_carrito.php';
                 },6000);
             }else{
-
+                console.log(respuesta.erno);
             }
         });
     });

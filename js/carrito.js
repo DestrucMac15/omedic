@@ -20,7 +20,7 @@ $(document).ready(function(){
     /*=====FINALIZAR COMPRA=====*/
     $('#finalizar_carrito').click(function(){
         swal({
-            title: 'Atencion',
+            title: 'Atención',
             text: "¿Deseas finalizar tu compra?",
             type: 'warning',
             showCancelButton: true,
@@ -103,7 +103,7 @@ function carrito(id_servicio,accion,fecha){
             let servicio = boton.closest('.servicio');
             let indice = servicio.data('indice');
             swal({
-                title: 'Atencion',
+                title: 'Atención',
                 text: "¿Deseas eliminar este servicio del carrito?",
                 type: 'warning',
                 showCancelButton: true,

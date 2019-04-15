@@ -22,6 +22,9 @@
                 <div class="title">
                     <h3>INICIO</h3>
                 </div>
+                <div class="main-content">
+                
+                </div>
             </div>
         </div>
 

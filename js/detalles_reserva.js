@@ -32,7 +32,7 @@ $(document).ready(function(){
                             swal('Lo siento','Solo puedes elegir fechas disponibles','info');
                         }else{
                             swal({
-                                title: 'Atencion',
+                                title: 'Atención',
                                 text: "¿Deseas agregar este producto con esa fecha?",
                                 type: 'success',
                                 showCancelButton: true,
@@ -54,7 +54,7 @@ $(document).ready(function(){
               },
               //Cuando da click en un evento
               eventClick: function(info) {
-                swal('Lo siento','Solo puedes elegir fechas disponibles','info');
+                swal('Lo siento','Sólo puedes elegir fechas disponibles','info');
               }
           
             });

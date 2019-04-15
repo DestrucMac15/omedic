@@ -11,7 +11,7 @@
             <span id="carrito_total"></span>
         </div>
     </div>
-    <button style="background: var(--verdeOmedic);" id="finalizar_carrito">FINALIZAR VENTA</button>
+    <button style="background: var(--verdeOmedic);" id="finalizar_carrito">FINALIZAR COMPRA</button>
     <button style="background: #000;" id="seguir_carrito">SEGUIR COMPRANDO</button>
 </div>
 

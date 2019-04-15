@@ -2,9 +2,9 @@
 function Conectarse()
 {
 	$host="localhost";
-	$db="omedic";
-	$usuario="root";
-	$pass="";
+	$db="omedic2019";
+	$usuario="omedic2019";
+	$pass="omedic2019colibri";
 	$set_local = "SET time_zone = '-05:00'";
 	$set_names = "SET NAMES 'utf8'";
 	date_default_timezone_set('America/Mexico_City');

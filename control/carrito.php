@@ -72,13 +72,24 @@ switch($accion){
             $execute_reservaciones = mysqli_query($link,$query_reservaciones);
             if($execute_reservaciones){
                 $respuesta['estatus'] = 'succcess';
-
+                $id_reservacion = mysqli_insert_id($link);
                 
                 foreach($_SESSION['servicios'] as $clave => $valor){
-                    $query = "INSERT INTO desc_reservaciones SET
-                    id_servicio = '".$valor['id_servicio']."',
-                    
+                    $id_servicio = $valor['datos']['id_servicio'];
+                    $fecha_desreservacion = $valor['datos']['fecha_reserva'];
+                    $query_desreservaciones = "INSERT INTO desc_reservaciones SET
+                        id_servicio = '$id_servicio',
+                        id_reservacion = '$id_reservacion',
+                        fecha_desreservacion = '$fecha_desreservacion'
                     ";
+
+                    $execute_desreservaciones = mysqli_query($link,$query_desreservaciones);
+                    if($execute_desreservaciones){
+                        $respuesta['estatus'] = 'success';
+                    }else{
+                        $respuesta['estatus'] = 'error';
+                        $respuesta['erno'] = 'Error en '.$query_desreservaciones.mysqli_error($link);
+                    }
                 }
             }else{
                 $respuesta['error'] = 'error';
@@ -89,6 +100,7 @@ switch($accion){
             $respuesta['error'] = 'error';
             $respuesta['erno'] = 'Error en '.$query_cliente.mysqli_error($link);
         }
+        echo json_encode($respuesta);
     break;
 }
 
