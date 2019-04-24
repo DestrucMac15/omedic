@@ -10,7 +10,8 @@ switch($accion){
     case 'add': //agregar servicio al carrito
         $id_servicio = $_POST['id_servicio'];
         $fecha = $_POST['fecha'];
-        $respuesta = agregarServicio($id_servicio,$link,$fecha);
+        $hora = $_POST['hora'];
+        $respuesta = agregarServicio($id_servicio,$link,$fecha,$hora);
         $_SESSION['servicios'][] = $respuesta;
 
         echo json_encode($_SESSION['servicios']);
@@ -103,7 +104,7 @@ switch($accion){
 
 
 
-function agregarServicio($id_servicio,$link,$fecha){
+function agregarServicio($id_servicio,$link,$fecha,$hora){
     $respuesta = array();
     $query = "SELECT id_servicio,nombre_servicio,precio_servicio,descripcion_servicio FROM servicios WHERE id_servicio='$id_servicio'";
     $execute = mysqli_query($link,$query);
@@ -111,6 +112,7 @@ function agregarServicio($id_servicio,$link,$fecha){
         $_SESSION['estatus'] = 'success';
         $row = mysqli_fetch_assoc($execute);
         $row['fecha_reserva'] = $fecha;
+        $row['hora_reserva'] = $hora;
         $respuesta['datos'] = $row;
 
         return $respuesta;

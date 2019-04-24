@@ -1,4 +1,17 @@
 $(document).ready(function(){
+    /*====DELIZAR DE OPCIONES===*/
+    $('#reservar').click(function(event){
+        event.preventDefault();
+        $('#id_servicio').toggleClass('ocultar-servicio');
+        $('#calendario').toggleClass('mostrar-calendario');
+    });
+    $('#atras').click(function(event){
+        event.preventDefault();
+        $('#id_servicio').toggleClass('ocultar-servicio');
+        $('#calendario').toggleClass('mostrar-calendario');
+    });
+
+
     let id_categoria = $('#categoria').data('id_categoria');
     $.when(buscarDisponibilidad(id_categoria,'')).done(function(disponibilidad){
         
@@ -31,21 +44,10 @@ $(document).ready(function(){
                         if(respuesta.num_rows > 0){
                             swal('Lo siento','Solo puedes elegir fechas disponibles','info');
                         }else{
-                            swal({
-                                title: 'Atención',
-                                text: "¿Deseas agregar este producto con esa fecha?",
-                                type: 'success',
-                                showCancelButton: true,
-                                cancelButtonText: 'Cancelar',
-                                confirmButtonColor: '#165E79',
-                                cancelButtonColor: '#d33',
-                                confirmButtonText: 'Agregar'
-                              },function(){
-                                swal('Correcto','Se ha agregado con éxito a tu carrito','success');
-                                let id_servicio = $('#id_servicio').data('id_servicio');
-                                let respuesta = carrito(id_servicio,'add',fecha);
-                                actualizarCarrito(respuesta);
-                            });    
+                            $('#fecha_seleccionada').text(obtenerFecha(fecha));
+                            $('#fecha').val(fecha);
+                            $('#modal_horario').toggleClass('modal-show');
+                            
                         }
                     });
                   }
@@ -74,7 +76,42 @@ $(document).ready(function(){
             calendar.render();
     });
     
-
+    $('#form-servicio').submit(function(event){
+        event.preventDefault();
+        let fecha = $('#fecha').val();
+        let hora = $('#hora').val();
+        swal({
+            title: 'Atención',
+            text: "¿Deseas agregar este producto con esa fecha?",
+            type: 'success',
+            showCancelButton: true,
+            cancelButtonText: 'Cancelar',
+            confirmButtonColor: '#165E79',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Agregar'
+            //},function(){
+                /*swal('Correcto','Se ha agregado con éxito a tu carrito','success');
+                let id_servicio = $('#id_servicio').data('id_servicio');
+                let respuesta = carrito(id_servicio,'add',fecha,hora);
+                let modal = $(this).closest('.modal');
+                modal.toggleClass('modal-show');
+                //location.href = 'detalles_reserva.php?id_servicio='+id_servicio;
+                actualizarCarrito(respuesta);*/
+                
+        },
+        function(isConfirm) {
+          if (isConfirm) {
+            swal('Correcto','Se ha agregado con éxito a tu carrito','success');
+                let id_servicio = $('#id_servicio').data('id_servicio');
+                let respuesta = carrito(id_servicio,'add',fecha,hora);
+                $('#id_servicio').toggleClass('ocultar-servicio');
+                $('#calendario').toggleClass('mostrar-calendario');
+                $('#modal_horario').toggleClass('modal-show');
+                $('#form-servicio')[0].reset();
+                actualizarCarrito(respuesta);
+            }
+        });   
+    });
 });
 
 function buscarDisponibilidad(id_categoria,fecha){

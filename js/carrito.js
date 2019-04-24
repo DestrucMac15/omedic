@@ -14,7 +14,7 @@ $(document).ready(function(){
     $('#seguir_carrito').click(function(){
         location.href = 'reservaciones';
     });
-    carrito('','list','');
+    carrito('','list','','');
 
 
     /*=====FINALIZAR COMPRA=====*/
@@ -84,7 +84,7 @@ function actualizarCarrito(servicios){
     return contenido;
 }
 
-function carrito(id_servicio,accion,fecha){
+function carrito(id_servicio,accion,fecha,hora){
     $.ajax({
         url: 'control/carrito.php',
         method: 'POST',
@@ -92,7 +92,8 @@ function carrito(id_servicio,accion,fecha){
         data: {
             id_servicio: id_servicio,
             accion: accion,
-            fecha: fecha
+            fecha: fecha,
+            hora: hora
         }
     }).done(function(respuesta){
         let contenido = actualizarCarrito(respuesta);
@@ -129,7 +130,6 @@ function obtenerFecha(fecha){
     let ano = newFecha.getFullYear();
     let mes = newFecha.getMonth();
     let dia = newFecha.getDate()+1;
-    
         return dia+' de '+meses[mes]+' del '+ano;
 }
 

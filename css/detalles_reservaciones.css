@@ -14,34 +14,43 @@ main .container{
 main .container .content{
     width: 100%;
     grid-area: content;
-}
-main .container .content .servicio{
-    width: 100%;
-    padding: 20px 10px;
-    display: grid;
+    display: flex;
+    justify-content: center;
     background: #fff;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-    'imagen calendario calendario'
-    'descripcion calendario calendario'
-    ;
+    padding: 10px 0px;
 }
-main .container .content .servicio .imagen{
+ main .container .content .container-deslizar{
+     width: 600px;
+     height: 600px;
+     position: relative;
+     overflow: hidden;
+ }
+ /*======SERVICIO=======*/
+ main .container .content .container-deslizar .servicio{
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0px;
+    transition: .5s;
+ }
+ main .container .content .container-deslizar .ocultar-servicio{
+     left: -600px;
+     transition: .5s;
+ }
+main .container .content .container-deslizar .servicio .imagen{
     grid-area: imagen;
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-main .container .content .servicio .imagen img{
+main .container .content .container-deslizar .servicio .imagen img{
     width: 200px;
     height: 200px;
     padding: 10px;
     background:  #eee;
 }
-main .container .content .servicio .descripcion{
+main .container .content .container-deslizar .servicio .descripcion{
     grid-area: descripcion;
     width: 100%;
     height: 100%;
@@ -51,64 +60,95 @@ main .container .content .servicio .descripcion{
     justify-content: space-between;
     align-items: center;
 }
-main .container .content .servicio .descripcion .nombre{
+main .container .content .container-deslizar .servicio .descripcion .nombre{
     color: var(--azulOmedic);
     font-size: 1.6em;
+    margin: 10px 0px;
 }
-main .container .content .servicio .descripcion .desc{
+main .container .content .container-deslizar .servicio .descripcion .desc{
     color: var(--grisOmedic);
     font-size: .9em;
+    margin: 10px 0px;
 }
-main .container .content .servicio .descripcion .duracion,
-main .container .content .servicio .descripcion .categoria{
+main .container .content .container-deslizar .servicio .descripcion .duracion,
+main .container .content .container-deslizar .servicio .descripcion .categoria{
     font-weight: bold;
+    margin: 10px 0px;
 }
-main .container .content .servicio .descripcion .precio{
+main .container .content .container-deslizar .servicio .descripcion .precio{
     font-weight: bold;
     font-size: 2em;
+    margin: 10px 0px;
 }
-main .container .content .servicio .descripcion a{
+main .container .content .container-deslizar .servicio .descripcion a{
     color: #fff;
     background: var(--azulOmedic);
     font-weight: bold;
     padding: 10px;
     text-decoration: none;
-    border: 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
 }
-/*=====calendario=======*/
-main .container .content .calendario{
-    grid-area: calendario;
+
+
+ main .container .content .container-deslizar .calendario{
     width: 100%;
-    padding: 20px;
-    background: #fff;
+    position: absolute;
+    left: 600px;
+    height: 100%;
+    transition: .5s;
+    padding: 5px;
+ }
+ main .container .content .container-deslizar .mostrar-calendario{
+    left: 0px;
+    transition: .5s;
+}
+ main .container .content .container-deslizar .calendario p{
+     text-align: center;
+     margin: 10px 0px;
+ }
+ 
+main .container .content .container-deslizar .calendario a{
+    color: #fff;
+    background: var(--azulOmedic);
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.form-group{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0px;
 }
-main .container .content .calendario .mensaje_disponibilidad{
-    animation: parpadear 2s infinite linear;
+.form-group #fecha_seleccionada{
+    margin: 0px 5px;
 }
-
-@keyframes parpadear{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+.form-group label{
+    margin: 0px 10px;
+}
+.form-group input{
+    font-family: 'Raleway';
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 1px solid var(--azulOmedic);
+    border-radius: 5px;
+    outline: none;
 }
 
 @media screen and (max-width: 900px){
     main .container{
         grid-template-columns: 1em 1fr 1em;
     }
-    main .container .content .servicio{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-        'imagen'
-        'descripcion'
-        'calendario'
-        ;
+    main .container .content .container-deslizar{
+        width: 100%;
+        padding: 0px 10px;
     }
 }

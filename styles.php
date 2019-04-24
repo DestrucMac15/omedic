@@ -17,4 +17,5 @@
 <!--ARCHIVOS-->
 <link href="css/menu.css" rel="stylesheet" type="text/css">
 <link href="css/footer.css" rel="stylesheet" type="text/css">
+<link href="css/modal.css" rel="stylesheet" type="text/css">
 <!--<link rel="shortcut icon" type="image/x-icon" href="imagenes/colibri.ico">-->
