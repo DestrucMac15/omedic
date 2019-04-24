@@ -41,7 +41,7 @@ $(document).ready(function(){
                                 cancelButtonColor: '#d33',
                                 confirmButtonText: 'Agregar'
                               },function(){
-                                swal('Correcto','Se a agregado con exito a tu carrito','success');
+                                swal('Correcto','Se ha agregado con éxito a tu carrito','success');
                                 let id_servicio = $('#id_servicio').data('id_servicio');
                                 let respuesta = carrito(id_servicio,'add',fecha);
                                 actualizarCarrito(respuesta);

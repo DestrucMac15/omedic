@@ -67,7 +67,14 @@ main .container .content .servicio .descripcion .precio{
     font-weight: bold;
     font-size: 2em;
 }
-
+main .container .content .servicio .descripcion a{
+    color: #fff;
+    background: var(--azulOmedic);
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    border: 5px;
+}
 /*=====calendario=======*/
 main .container .content .calendario{
     grid-area: calendario;
@@ -88,5 +95,20 @@ main .container .content .calendario .mensaje_disponibilidad{
     }
     100%{
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 900px){
+    main .container{
+        grid-template-columns: 1em 1fr 1em;
+    }
+    main .container .content .servicio{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        'imagen'
+        'descripcion'
+        'calendario'
+        ;
     }
 }

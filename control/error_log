@@ -1,6 +1,0 @@
-[12-Apr-2019 17:14:20 America/Mexico_City] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/sc5m5lbfclpl/public_html/control/conexi.php on line 12
-[12-Apr-2019 17:14:20 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/sc5m5lbfclpl/public_html/control/conexi.php on line 13
-[12-Apr-2019 17:14:20 America/Mexico_City] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/sc5m5lbfclpl/public_html/control/conexi.php on line 12
-[12-Apr-2019 17:14:20 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/sc5m5lbfclpl/public_html/control/conexi.php on line 13
-[12-Apr-2019 17:14:20 America/Mexico_City] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/sc5m5lbfclpl/public_html/control/conexi.php on line 12
-[12-Apr-2019 17:14:20 America/Mexico_City] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/sc5m5lbfclpl/public_html/control/conexi.php on line 13

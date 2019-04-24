@@ -4,7 +4,7 @@ header{
 }
 header .textoInicial{
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
     color: var(--grisClaro);
     margin: 10px 0px;

@@ -21,15 +21,48 @@ SESSION_START();
         <main>
             <section class="container">
                 <div class="content">
-                    <h2 class="title">FINALIZAR COMPRA</h2>
-                    <div class="list_servicios" id="list_servicios">
-                        
+                    <div class="form">
+                        <p class="texto">A continuación ingresa los siguientes
+                        campos para completar el registro de compra.</p>
+                        <form id="form_cliente">
+                            <div class="form_group">
+                                <label for="">Nombre (obligatorio):</label>
+                                <input type="text" name="nombre_cliente" required>
+                            </div>
+                            <div class="form_group">
+                                <label for="">Correo (obligatorio):</label>
+                                <input type="email" name="correo_cliente" required >
+                            </div>
+                            <div class="form_group">
+                                <label for="">Teléfono (obligatorio):</label>
+                                <input type="phone" name="telefono_cliente" required>
+                            </div>
+                            <div class="form_group">
+                                <label for="">Dirección (obligatorio):</label>
+                                <textarea name="direccion_cliente" rows="5" required></textarea>
+                            </div>
+                            <div class="form_group">
+                                <label for="">Edad (obligatorio):</label>
+                                <input type="number" name="edad_cliente" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">SIGUIENTE</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="servicio">
-                        <p class="total" id="precio_total"></p>
-                    </div>
-                    <div class="pago_paypal">
-                        <div id="paypal-button-container"></div>
+                    <div class="paypal oculto" id="contenido_paypal">
+                        <button class="atras" id="regresar">REGRESAR</button>
+                        <h2 class="title">FINALIZAR COMPRA</h2>
+                        <input type="number" id="monto_total" style="display: none;">
+                        <div class="list_servicios" id="list_servicios">
+                            
+                        </div>
+                        <div class="servicio">
+                            <p class="total" id="precio_total"></p>
+                        </div>
+                        <div class="pago_paypal">
+                            <div id="paypal-button-container"></div>
+                        </div>
                     </div>
                 </div>
 

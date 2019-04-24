@@ -96,7 +96,7 @@ function listarServicios(clave,valor,tipo_busqueda){
                 $('.reservar').click(function(){
                     let boton = $(this);
                     let id_servicio = boton.closest('.servicio').data('id_servicio');
-                    location.href = `detalles_reserva.php?id_servicio=${id_servicio}`;
+                    location.href = `detalles_reserva?id_servicio=${id_servicio}`;
                 });
                 
             }else{

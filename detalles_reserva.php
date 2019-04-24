@@ -47,9 +47,10 @@ if(isset($_GET['id_servicio'])){
                         <div class="descripcion">
                             <h2 class="nombre"><?php echo $row['nombre_servicio']; ?></h2>
                             <p class="desc"><?php echo $row['descripcion_servicio']; ?></p>
-                            <p class="duracion">Duracion de la sesión: <?php echo $row['tiempo_servicio']; ?> min</p>
-                            <p class="categoria" id="categoria" data-id_categoria="<?php echo $row['id_categoria']; ?>">Categoria: <?php echo $row['nombre_categoria']; ?></p>
+                            <p class="duracion">Duración de la sesión: <?php echo $row['tiempo_servicio']; ?> min</p>
+                            <p class="categoria" id="categoria" data-id_categoria="<?php echo $row['id_categoria']; ?>">Categoría: <?php echo $row['nombre_categoria']; ?></p>
                             <p class="precio">Precio: $<?php echo $row['precio_servicio']; ?>.00</p>
+                            <a href="reservaciones">IR A CATALOGO</a> 
                         </div>
                         <div class="calendario" id="calendario">
                             <div id="calendar"></div>

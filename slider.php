@@ -7,7 +7,7 @@
                     A DOMICILIO
                 </h2>
                 <p class="parrafo">
-                    Entraga de imágenes de manera inmediata
+                    Entrega de imágenes de manera inmediata
                 </p>
                 <button class="servicio_link" data-servicio="estudios-a-domicilio.php">
                     CONOCE MÁS
@@ -54,7 +54,7 @@
                 <ul class="parrafo">
                     <li>Check up empresariales y personales</li>
                     <li>Radiología intervencionista</li>
-                    <li>Servicio técnico radiólogo o Ing. biomédico</li>
+                    <li>Servicio técnico radiólogo o Ing. biomédico a su disposición</li>
                 </ul>
                 <button class="servicio_link" data-servicio="otros-servicios.php">
                     CONOCE MÁS

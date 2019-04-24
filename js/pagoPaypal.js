@@ -1,6 +1,15 @@
 $(document).ready(function(){
     carrito('','list','');
     
+    $('#form_cliente').submit(function(event){
+        event.preventDefault();
+        let form = $(this);
+        let boton = form.find(':button');
+        $('#contenido_paypal').toggleClass('oculto');
+    });
+    $('#regresar').click(function(){
+        $('#contenido_paypal').toggleClass('oculto');
+    });
 });
 
 
@@ -23,10 +32,23 @@ function realizarPago(precio){
     //Al finalizar la transaccion
     onApprove: function(data, actions) {
         return actions.order.capture().then(function(details) {
-            // Una vez que se realizo el pago
-            swal('Correcto','Se a realizado tu pago correctamente','success');
-            location.href = 'formulario_cliente.php';
-            carrito('','verificar','');
+
+            let datos = $('#form_cliente').serialize();
+            $.ajax({
+                url: 'control/carrito.php',
+                method: 'POST',
+                dataType: 'JSON',
+                data: datos+'&accion=save'
+            }).done(function(respuesta){
+                if(respuesta.estatus == 'success'){
+                    swal('Correcto','Gracias por contratar nuestros servicios, a continuaci贸n uno de nuestros agentes de OMEDIC se pondr谩 en contacto contigo para confirmar la reservaci贸n','success');
+                    setTimeout(function(){
+                        location.href = 'destruir_carrito.php';
+                    },6000);
+                }else{
+                    //console.log(respuesta.erno);
+                }
+            });
         });
     }
     }).render('#paypal-button-container');
@@ -58,6 +80,7 @@ function actualizarCarrito(servicios){
                 </div>
             `;
         });
+        $('#monto_total').val(precio);
         $('#precio_total').text(`TOTAL MXN $${precio}.00`);
         realizarPago(`${precio}.00`);
         

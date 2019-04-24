@@ -12,7 +12,7 @@ $(document).ready(function(){
         carrito.toggleClass('oculto');
     });
     $('#seguir_carrito').click(function(){
-        location.href = 'reservaciones.php';
+        location.href = 'reservaciones';
     });
     carrito('','list','');
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
                 if(respuesta == 'error'){
                     alert('Por favor ingresar un servicio');
                 }else{
-                    location.href = 'venta_detalle.php';
+                    location.href = 'venta_detalle';
                 }
             });
             
@@ -112,7 +112,7 @@ function carrito(id_servicio,accion,fecha){
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Quitar'
               },function(){
-                swal('Correcto','Se a removido el servicio con exito','success');
+                swal('Correcto','Se ha removido el servicio con éxito','success');
                 let respuesta = carrito(indice,'delete');
                 actualizarCarrito(respuesta);
             });    

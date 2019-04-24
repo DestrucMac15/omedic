@@ -9,7 +9,7 @@ div#slider figure{
     height: 100%;
     left: 0;
     text-align: left;
-    animation: 50s slidy infinite; 
+    animation: 100s slidy infinite; 
 }
 div#slider figure .imagen{ 
     width: 20%; 

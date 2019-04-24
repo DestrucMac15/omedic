@@ -4509,7 +4509,7 @@ Docs & License: https://fullcalendar.io/
             prevYear: 'prev year',
             nextYear: 'next year',
             year: 'year',
-            today: 'today',
+            today: 'hoy',
             month: 'month',
             week: 'week',
             day: 'day',

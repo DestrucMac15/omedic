@@ -18,7 +18,7 @@ $menu = 'principal';
     <div class="container">
         <?php include('menu.php'); ?>
         <header>
-            <h3 class="textoInicial">Especialistas en Pacientes Geriátricos y Tomas Difíciles</h3>
+            <h3 class="textoInicial">Ultrasonidos , Rx y Laboratorios, Especialistas en Pacientes Geriátricos y Tomas Difíciles</h3>
             <?php include('slider.php'); ?>
         </header>
         

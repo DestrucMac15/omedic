@@ -1,0 +1,142 @@
+.main-content{
+    width: 100%;
+}
+
+/*======CARDS=======*/
+.main-content .container-cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-content .container-cards .card{
+    width: 300px;
+    height: 150px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0px 20px;
+}
+.main-content .container-cards .card .body-card{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    height: 80%;
+    color: var(--azulOmedic);
+}
+.main-content .container-cards .card .body-card .title{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.main-content .container-cards .card .body-card .title i{
+    font-size: 3em;
+    margin: 5px;
+}
+.main-content .container-cards .card .body-card .cant{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+.main-content .container-cards .card .footer-card{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.main-content .container-cards .card .footer-card a{
+    text-decoration: none;
+    color: var(--rojoOmedic);
+    cursor: pointer;
+}
+
+/*=====RESERVACION-MESSAGES======*/
+.main-content .container-dash{
+    width: 100%;
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1em 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:  
+    'message . reservacion'
+    ;
+}
+.main-content .container-dash > div{
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0px 5px 6px #aaa;
+}
+.main-content .container-dash > div h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+/*=====MENSAJES=====*/
+.main-content .container-dash .messages{
+    width: 100%;
+    grid-area: message;
+}
+.main-content .container-dash .messages .container-messages{
+    width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.main-content .container-dash .messages .container-messages .message{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:  
+    'logo datos'
+    'mensaje mensaje'
+    ;
+    border: 2px solid #eee;
+    padding: 5px;
+    margin: 5px;
+}
+.main-content .container-dash .messages .container-messages .message .logo-user{
+    width: 100%;
+    grid-area: logo;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+}
+.main-content .container-dash .messages .container-messages .message .datos{
+    width: 100%;
+    padding: 0px 10px;
+    grid-area: datos;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--rojoOmedic);
+}
+.main-content .container-dash .messages .container-messages .message .mensaje{
+    width: 100%;
+    grid-area: mensaje;
+    padding: 0px 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    font-size: .9em;
+    padding: 5px 0px;
+}
+.main-content .container-dash .messages .container-messages .message .mensaje .asunto{
+    font-size: 1em;
+    font-weight: bold;
+}
+.main-content .container-dash .messages .container-messages .message .datos .correo{
+    font-size: .9em;
+    font-weight: bold;
+}
+.main-content .container-dash .reservacion{
+    width: 100%;
+    height: 100%;
+    grid-area: reservacion;
+}

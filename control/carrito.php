@@ -40,10 +40,6 @@ switch($accion){
             echo json_encode($_SESSION['servicios']);
         }
     break;
-    case 'verificar':
-        $_SESSION['verificacion'] = 'success';
-        echo json_encode($_SESSION['verificacion']);  
-    break;
     case 'save':
         $respuesta = array();
 
